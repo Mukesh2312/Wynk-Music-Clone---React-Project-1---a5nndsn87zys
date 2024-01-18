@@ -1,9 +1,31 @@
 import React from "react";
+import '../styles/Register.css';
 
 const Register = () => {
     return (
         <div className="Register_container">
-            Register
+            <div className="form_container">
+
+
+                <div className="register_heading">
+                    <h2>Register</h2>
+                </div>
+                <div className="register_form">
+                    <form>
+                        <input type="text" name="name" id="name" placeholder="Name" required />
+                        <input type="text" name="email" id="email" placeholder="Email" required />
+                        <input type="password" name="password" id="password" placeholder="Password" required />
+
+                        <label for="appType">App Type</label>
+                        <select name="appType" id="appType" required>
+                            <option value="music">music</option>
+                            <option value="album">album</option>
+                        </select>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }

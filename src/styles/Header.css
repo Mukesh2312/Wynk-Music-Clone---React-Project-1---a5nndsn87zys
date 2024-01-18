@@ -25,7 +25,7 @@
     display: flex;
 }
 
-ul li{
+.header_items_container ul li{
     list-style: none;
 }
 
@@ -38,7 +38,7 @@ ul li{
 .login_btn:hover{
     color: #ffffffb0;
 }
-input[type="text"] {
+.header_items_container input {
     border: 1px solid #ffffff30;
     display: flex;
     font-size: 1rem;
@@ -49,7 +49,7 @@ input[type="text"] {
 
 }
 
-input[type="text"]:focus-visible{
+.header_items_container input[type="text"]:focus-visible{
     outline: none;
     color: #aaaaaa;
 }
