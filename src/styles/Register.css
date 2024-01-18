@@ -3,6 +3,7 @@
     max-width: 1920px;
    
     padding: 2rem 20px;
+    background-color: rgb(12,15,18);
 }
 
 .form_container{
@@ -12,6 +13,8 @@
 .register_heading h2{
     text-align: center;
     margin-bottom: 2rem;
+    color: #ffffff8a;
+    font-size: 2.3rem;
 }
 
 .register_form form {
@@ -20,6 +23,12 @@
     gap: 1rem;
     width: 60%;
     margin: auto;
+    color: #ffffff7d;
+}
+.register_form form input, select{
+    background-color: rgb(35,35,35);
+    color: #aaaaaa;
+
 }
 .register_form form > button{
     margin-top: 1rem;
@@ -27,8 +36,22 @@
     cursor: pointer;
 }
 .register_form button{
-    padding: 10px 20px;
+    padding: 10px 33px;
     font-size: 16px;
     border: 1px solid gray;
-    border-radius: 12px;
+    border-radius: 15px;
+    background: transparent;
+    transition: 0.2s;
+    background-image: linear-gradient(142.41deg,#fff 15.41%,#000 269.3%);
+
+}
+.register_form button:hover{
+    opacity: .9;
+}
+
+.register_form input , select{
+    font-size: 16px;
+    padding: 14px 10px;
+    border-radius: 15px;
+    border: 1px solid #00000038;
 }

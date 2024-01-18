@@ -2,6 +2,11 @@ import React from "react";
 import '../styles/Register.css';
 
 const Register = () => {
+
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+        // alert("Form Submitted");
+    }
     return (
         <div className="Register_container">
             <div className="form_container">
@@ -11,7 +16,7 @@ const Register = () => {
                     <h2>Register</h2>
                 </div>
                 <div className="register_form">
-                    <form>
+                    <form onSubmit={onSubmitHandler}>
                         <input type="text" name="name" id="name" placeholder="Name" required />
                         <input type="text" name="email" id="email" placeholder="Email" required />
                         <input type="password" name="password" id="password" placeholder="Password" required />
