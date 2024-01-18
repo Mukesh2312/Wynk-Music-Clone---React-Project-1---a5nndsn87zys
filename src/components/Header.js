@@ -1,6 +1,8 @@
 import React from "react";
+
 import '../styles/Header.css'
 import { NavLink } from "react-router-dom";
+
 
 const Header = () => {
     return (
@@ -26,7 +28,9 @@ const Header = () => {
                 <div className="header_links_container">
                     <ul>
                         <li>
-                            <NavLink to='/login' className='login_btn'>Login</NavLink>
+                            <NavLink to='/login' className='login_btn'>
+                                Login
+                            </NavLink>
                         </li>
 
                     </ul>
