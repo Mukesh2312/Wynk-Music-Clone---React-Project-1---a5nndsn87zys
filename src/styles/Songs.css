@@ -1,0 +1,28 @@
+
+.music-collection{
+    padding-top: 3rem;
+    background-color: rgb(12,15,18);
+    color: #ffffffb0;
+}
+.songs_outer_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.song_inner_container {
+    min-width: 5rem;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 20px) / 8);
+    margin: 10px;
+}
+.song_thumbnail img {
+    width: 100%;
+    border-radius: 6px;
+}
+.song_inner_container h4{
+    font-weight: 400;
+
+}

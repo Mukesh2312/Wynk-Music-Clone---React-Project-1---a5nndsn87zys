@@ -5,7 +5,7 @@ const Register = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        // alert("Form Submitted");
+        alert("Form Submitted");
     }
     return (
         <div className="Register_container">
@@ -21,7 +21,7 @@ const Register = () => {
                         <input type="text" name="email" id="email" placeholder="Email" required />
                         <input type="password" name="password" id="password" placeholder="Password" required />
 
-                        <label for="appType">App Type</label>
+                        <label htmlFor="appType">App Type</label>
                         <select name="appType" id="appType" required>
                             <option value="music">music</option>
                             <option value="album">album</option>

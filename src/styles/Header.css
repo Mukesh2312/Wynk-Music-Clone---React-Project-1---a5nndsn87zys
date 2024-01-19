@@ -9,7 +9,7 @@
 .header_items_container{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: auto;
     align-items: center; 
 }
@@ -34,15 +34,21 @@
     color: rgb(110,110,110);
     transition: 0.02s;
     font-size: 18px;
+    display: flex;
 }
-.login_btn:hover{
-    color: #ffffffb0;
+.faUser{
+    font-size: 25px;
+    color: #fff9;
+    transition: 0.2s;
+}
+.login_btn .faUser:hover{
+    color: #fffffff0;
 }
 .header_items_container input {
     border: 1px solid #ffffff30;
     display: flex;
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 10px 42px 10px 18px;
     border-radius: 20px;
     background-color: rgb(35,35,35);
     color: #aaaaaa;
@@ -52,4 +58,11 @@
 .header_items_container input[type="text"]:focus-visible{
     outline: none;
     color: #aaaaaa;
+}
+
+.header_links_container{
+    position: relative;
+}
+.nesteddrop{
+    position: absolute;
 }
