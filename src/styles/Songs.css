@@ -15,8 +15,10 @@
     word-wrap: break-word;
     display: flex;
     flex-direction: column;
-    width: calc((100% - 20px) / 8);
-    margin: 10px;
+    width: calc((100% - 20px) / 7);
+    margin: 17.7px;
+    gap: 10px;
+    margin-bottom: 1rem;
 }
 .song_thumbnail img {
     width: 100%;
@@ -24,5 +26,6 @@
 }
 .song_inner_container h4{
     font-weight: 400;
+    padding: 0 5px 0 0;
 
 }
