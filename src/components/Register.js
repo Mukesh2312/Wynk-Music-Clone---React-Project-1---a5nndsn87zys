@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 import '../styles/Register.css';
 
 const Register = () => {
-
+    const navigate = useNavigate();
     const [getData, setData] = useState({
         name: '',
         email: '',
@@ -12,11 +14,18 @@ const Register = () => {
     })
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        alert("Form Submitted");
+
+        axios.post("https://academics.newtonschool.co/api/v1/user/signup", getData).then((response) => {
+            navigate('/login');
+            console.log(log)
+        }).catch((error) => {
+            console.log(error)
+        })
     }
 
-    const onChangerHandler = () => {
-        console.log(getData)
+    const onChangerHandler = (e) => {
+        setData({ ...getData, [e.target.name]: e.target.value })
+
     }
     return (
         <div className="Register_container">
