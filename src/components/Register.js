@@ -17,9 +17,9 @@ const Register = () => {
                 </div>
                 <div className="register_form">
                     <form onSubmit={onSubmitHandler}>
-                        <input type="text" name="name" id="name" placeholder="Name" required />
-                        <input type="text" name="email" id="email" placeholder="Email" required />
-                        <input type="password" name="password" id="password" placeholder="Password" required />
+                        <input type="text" name="name" id="name" placeholder="Name" required autoComplete="off" />
+                        <input type="text" name="email" id="email" placeholder="Email" required autoComplete="off" />
+                        <input type="password" name="password" id="password" placeholder="Password" required autoComplete="off" />
 
                         <label htmlFor="appType">App Type</label>
                         <select name="appType" id="appType" required>

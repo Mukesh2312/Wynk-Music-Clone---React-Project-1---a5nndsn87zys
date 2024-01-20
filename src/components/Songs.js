@@ -11,7 +11,7 @@ const Songs = () => {
 
         const Songs = async () => {
             try {
-                let response = await fetch('https://academics.newtonschool.co/api/v1/music/song?limit=100', {
+                let response = await fetch('https://academics.newtonschool.co/api/v1/music/song?limit=200', {
                     headers: {
                         'projectId': 'a5nndsn87zys'
 
