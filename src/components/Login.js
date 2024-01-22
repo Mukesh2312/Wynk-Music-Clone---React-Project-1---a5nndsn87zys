@@ -21,7 +21,7 @@ const Login = () => {
         e.preventDefault();
 
         axios.post("https://academics.newtonschool.co/api/v1/user/login", getData).then((response) => {
-            navigate('/songs')
+            navigate('/')
             console.log(response)
 
         }).catch((error) => {
@@ -45,8 +45,14 @@ const Login = () => {
                 <div className="login_heading register_heading">
                     <h2>Login</h2>
                 </div>
+                <div className="error_container" style={{ color: 'red' }}>
+
+                    <h5>
+                        {getError}
+                    </h5>
+                </div>
                 <div className="login_form_container register_form">
-                    {getError}
+
                     <form onSubmit={onSubmitHandler} >
                         <input type="text" name='email' value={getData.email} id='email' autoComplete='off' placeholder='Email Address' required onChange={onChangerHandler} />
                         <input type="password" name='password' value={getData.password} id='email' autoComplete='off' placeholder='Password' required onChange={onChangerHandler} />
@@ -58,6 +64,7 @@ const Login = () => {
 
                         <button className="button-68" type="submit">Submit</button>
                     </form>
+
                 </div>
             </div>
         </div>
