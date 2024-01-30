@@ -31,7 +31,8 @@
 
 .login_btn{
     text-decoration: none;
-    color: rgb(110,110,110);
+    color: rgba(255, 255, 255, 0.841);
+
     transition: 0.02s;
     font-size: 18px;
     display: flex;
@@ -42,7 +43,8 @@
     transition: 0.2s;
 }
 .login_btn .faUser:hover{
-    color: #fffffff0;
+    color: rgb(110,110,110);
+
 }
 .header_items_container input {
     border: 1px solid #ffffff30;
@@ -62,7 +64,25 @@
 
 .header_links_container{
     position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 .nesteddrop{
     position: absolute;
+}
+.subcription{
+    display: flex;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.841);
+    cursor: pointer;
+    font-weight: 400;
+}
+.subcription:hover{
+    color: rgb(110,110,110);
+}
+
+.vertical_line{
+    border: 1px solid gray;
+    height: 31px;
 }
