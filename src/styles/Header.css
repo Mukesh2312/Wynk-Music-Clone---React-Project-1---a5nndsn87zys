@@ -39,7 +39,6 @@
 }
 .faUser{
     font-size: 25px;
-    color: #fff9;
     transition: 0.2s;
 }
 .login_btn .faUser:hover{
@@ -56,7 +55,9 @@
     color: #aaaaaa;
 
 }
-
+.search_navlink{
+    text-decoration: none;
+}
 .header_items_container input[type="text"]:focus-visible{
     outline: none;
     color: #aaaaaa;

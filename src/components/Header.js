@@ -42,11 +42,15 @@ const Header = () => {
                 </div>
                 <div className="header_links_container">
                     <div className="search_box">
-                        <input type="text" placeholder="Search Music" onChange={onSearchHandler} />
+                        <NavLink to='/search' className='search_navlink'>
+
+                            <input type="text" placeholder="Search Music" onChange={onSearchHandler} />
+                        </NavLink>
                     </div>
                     <div className="subcription">
                         <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1943_5431)"><rect x="4.125" y="3" width="15.75" height="18" rx="2" stroke="currentColor" stroke-width="1.5"></rect><path d="M9 16.1738H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><g clip-path="url(#clip1_1943_5431)"><path d="M12.3372 13.2729L10.176 10.5687L10.1885 10.0328C11.2028 10.1027 11.9914 9.99537 12.1748 9.03592L10.0136 9.02351L10.3634 8.43772L12.0874 8.46254C11.8247 7.9166 11.1023 7.84931 9.97607 7.8894L10.3634 7.31602L14.0239 7.31055L13.6616 7.87679H12.6496C12.8346 8.07203 12.97 8.29667 12.9745 8.48742L14.0239 8.47496L13.6616 9.03574L12.962 9.0482C12.8527 9.88472 12.0842 10.38 11.113 10.4938L13.2887 13.2722L12.3373 13.2727V13.2727L12.3372 13.2729Z" fill="currentColor" stroke="currentColor" stroke-width="0.00236424"></path></g></g><defs><clipPath id="clip0_1943_5431"><rect width="24" height="24" fill="white"></rect></clipPath><clipPath id="clip1_1943_5431"><rect width="4.05064" height="5.97455" fill="white" transform="translate(9.97461 7.30078)"></rect></clipPath></defs></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none"><g clipPath="url(#clip0_1943_5431)"><rect x="4.125" y={3} width="15.75" height={18} rx={2} stroke="currentColor" strokeWidth="1.5" /><path d="M9 16.1738H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /><g clipPath="url(#clip1_1943_5431)"><path d="M12.3372 13.2729L10.176 10.5687L10.1885 10.0328C11.2028 10.1027 11.9914 9.99537 12.1748 9.03592L10.0136 9.02351L10.3634 8.43772L12.0874 8.46254C11.8247 7.9166 11.1023 7.84931 9.97607 7.8894L10.3634 7.31602L14.0239 7.31055L13.6616 7.87679H12.6496C12.8346 8.07203 12.97 8.29667 12.9745 8.48742L14.0239 8.47496L13.6616 9.03574L12.962 9.0482C12.8527 9.88472 12.0842 10.38 11.113 10.4938L13.2887 13.2722L12.3373 13.2727V13.2727L12.3372 13.2729Z" fill="currentColor" stroke="currentColor" strokeWidth="0.00236424" /></g></g><defs><clipPath id="clip0_1943_5431"><rect width={24} height={24} fill="white" /></clipPath><clipPath id="clip1_1943_5431"><rect width="4.05064" height="5.97455" fill="white" transform="translate(9.97461 7.30078)" /></clipPath></defs></svg>
+
                         </span>
                         <p>Manage Subscription</p>
                     </div>
