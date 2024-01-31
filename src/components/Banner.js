@@ -58,37 +58,37 @@ function Banner() {
 
 }
 
-const bannerImgLink = [
-    {
-        src: 'bannerImage/Bhajan.webp'
-    },
-    {
-        src: 'bannerImage/Bollywood.webp'
-    },
-    {
-        src: 'bannerImage/Dunki.webp'
+// const bannerImgLink = [
+//     {
+//         src: 'bannerImage/Bhajan.webp'
+//     },
+//     {
+//         src: 'bannerImage/Bollywood.webp'
+//     },
+//     {
+//         src: 'bannerImage/Dunki.webp'
 
-    },
-    {
-        src: 'bannerImage/Emotion_songs.webp'
-    },
-    {
-        src: 'bannerImage/Freshe.webp'
-    },
-    {
-        src: 'bannerImage/Hot_right_now.webp'
-    },
-    {
-        src: 'bannerImage/Love_hits.webp'
-    },
-    {
-        src: 'bannerImage/Love_songs.webp'
-    },
-    {
-        src: 'bannerImage/New_in_rock.webp'
-    },
+//     },
+//     {
+//         src: 'bannerImage/Emotion_songs.webp'
+//     },
+//     {
+//         src: 'bannerImage/Freshe.webp'
+//     },
+//     {
+//         src: 'bannerImage/Hot_right_now.webp'
+//     },
+//     {
+//         src: 'bannerImage/Love_hits.webp'
+//     },
+//     {
+//         src: 'bannerImage/Love_songs.webp'
+//     },
+//     {
+//         src: 'bannerImage/New_in_rock.webp'
+//     },
 
-];
+// ];
 
 
 export default Banner;
