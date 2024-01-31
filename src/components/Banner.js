@@ -1,25 +1,26 @@
 import React from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import '../styles/Banner.css'
 
 
-function Banner() {
 
+function Banner() {
     const settings = {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500
+        autoplay: true,
+        centerPadding: "310px",
+        slidesToShow: 1,
+        speed: 400
     };
 
     return (
         <div className='Banner_container'>
 
-            <Slider {...settings} >
+            <Slider {...settings}>
                 {
                     bannerImgLink.map((img, index) => {
                         return (
@@ -31,10 +32,32 @@ function Banner() {
                     })
                 }
             </Slider>
+
+            {/* <Slider {...settings}>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+                <div className='banner_img_container'>
+                    <img src="bannerImage/Bhajan.webp" alt="logo" />
+                </div>
+            </Slider> */}
         </div>
     )
 
 }
+
 const bannerImgLink = [
     {
         src: 'bannerImage/Bhajan.webp'
@@ -66,5 +89,6 @@ const bannerImgLink = [
     },
 
 ];
+
 
 export default Banner;

@@ -2,25 +2,11 @@
     width: 100%;
     overflow: hidden;
 }
-.banner_img_container{
-   margin: 0 3rem;
+
+.banner_img_container:focus-visible{
+    outline: none;
 }
 .banner_img_container img{
-    width: 100%;
-    border-radius: 20px;
-}
-.slick-prev {
-    left: 10%;
-    z-index: 5;
-}
-.slick-next {
-    right: 10%;
-    z-index: 5;
-}
-
-.slick-next, .slick-prev{
-    top: 20px;
-}
-.slick-slide {
-    padding: 0 18px;
+ 
+    border-radius: 17px;
 }

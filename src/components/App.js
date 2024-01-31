@@ -12,6 +12,7 @@ import Search from "./Search";
 
 
 
+
 function App() {
   axios.interceptors.request.use(async (config) => {
     config.headers['projectid'] = "a5nndsn87zys";
@@ -23,11 +24,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Songs" element={<Songs />} />
-          <Route path="/search" element={<Search />} />
         </Routes>
+
       </Router>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/Songs.css'
 import Loader from "./Loader";
 import axios from "axios";
+import Banner from "./Banner";
 
 const Songs = () => {
     const [music, setMusic] = useState([]);
@@ -37,10 +38,12 @@ const Songs = () => {
     }, [])
     return (
         <div className="music-collection">
+
             {loader ? <Loader /> :
                 <div className="songs_outer_container">
 
                     {
+
                         music.map((song) => {
                             return (
                                 <div className="song_inner_container" key={song._id}>
@@ -53,7 +56,9 @@ const Songs = () => {
                             )
                         })
                     }
-                </div>}
+                </div>
+            }
+            <Banner />
         </div>
     )
 }

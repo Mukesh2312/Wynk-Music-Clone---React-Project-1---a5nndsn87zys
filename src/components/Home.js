@@ -3,6 +3,8 @@ import '../styles/Songs.css'
 import Loader from "./Loader";
 import axios from "axios";
 import Banner from "./Banner";
+// import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 
 const Home = () => {
     const [music, setMusic] = useState([]);
@@ -38,10 +40,17 @@ const Home = () => {
     }, [])
     return (
         <div className="music-collection">
+            <div className="banner_contianer_for_margin">
+
+                {
+                    loader ? <Loader /> : <Banner />
+                }
+            </div>
+
+
             {loader ? <Loader /> :
 
                 <div className="songs_outer_container">
-                    <Banner />
 
                     {
                         music.map((song) => {
@@ -49,6 +58,9 @@ const Home = () => {
                                 <div className="song_inner_container" key={song._id}>
                                     <div className="song_thumbnail">
                                         <img src={song.image} alt={song.title} />
+                                        <div class="overlay">
+                                            <span class="play-button">&#9654;</span>
+                                        </div>
                                     </div>
                                     <h4>{song.title}</h4>
 

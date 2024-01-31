@@ -32,9 +32,9 @@ const Header = () => {
                     <NavLink to='/' className="logo">
 
                         <img src="https://img.icons8.com/color-glass/144/wynk-music.png" alt="logo" />
-                        <h3>
+                        <p>
                             Wynk Music
-                        </h3>
+                        </p>
                     </NavLink>
 
 

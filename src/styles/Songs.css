@@ -19,7 +19,45 @@
     margin: 17.7px;
     gap: 10px;
     margin-bottom: 1rem;
+    cursor: pointer;
+    
 }
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+   
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
+    transition: opacity 0.3s ease;
+
+  }
+  .play-button{
+    font-size: 20px;
+    background: white;
+    color: rgb(220,38,38);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .song_thumbnail{
+    position: relative;
+  }
+  .song_thumbnail:hover img {
+    opacity: 0.7; /* Adjust the hover opacity as needed */
+  }
+
+  .song_thumbnail:hover .overlay {
+    opacity: 1;
+  }
 .song_thumbnail img {
     width: 100%;
     border-radius: 6px;
@@ -28,4 +66,7 @@
     font-weight: 400;
     padding: 0 5px 0 0;
 
+}
+.banner_contianer_for_margin{
+    margin-bottom: 4rem;
 }
