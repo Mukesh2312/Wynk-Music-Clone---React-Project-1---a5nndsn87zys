@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Search.css'
 import Banner from './Banner';
+import SecondryNav from './SecondryNav';
 
 function Search() {
     return (

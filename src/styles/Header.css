@@ -2,7 +2,7 @@
     width: 100%;
     background-color: rgb(27,27,27);
     max-width: 1920px;
-    padding: 15px 0;
+    padding: 15px 0 0;
 
 }
 
@@ -12,6 +12,7 @@
     width: 90%;
     margin: auto;
     align-items: center; 
+    margin-bottom: 15px;
 }
 
 .logo {
@@ -19,9 +20,13 @@
     align-items: center;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.841);
-    font-weight: 400;
+}
+#logo_text{
     letter-spacing: 1px;
     font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.841);
+
 }
 .logo_container img{
     width: 60px;

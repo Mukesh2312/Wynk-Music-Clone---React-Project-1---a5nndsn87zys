@@ -4,6 +4,7 @@ import axios from 'axios';
 import '../styles/Header.css'
 import { FaUser } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
+import SecondryNav from "./SecondryNav";
 
 
 
@@ -32,7 +33,7 @@ const Header = () => {
                     <NavLink to='/' className="logo">
 
                         <img src="https://img.icons8.com/color-glass/144/wynk-music.png" alt="logo" />
-                        <p>
+                        <p id="logo_text">
                             Wynk Music
                         </p>
                     </NavLink>
@@ -67,6 +68,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
+            <SecondryNav />
 
         </header>
     )

@@ -23,10 +23,13 @@ const Home = () => {
             // });
             // let data = await response.json();
             // let results = data.data
-            // console.log(data.data);
+            // console.log(data.data)
+
+
+
 
             //fetching with axios;
-            axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=200').then((Response) => {
+            axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
                 console.log(Response);
                 let data = Response.data.data;
                 setMusic(data)

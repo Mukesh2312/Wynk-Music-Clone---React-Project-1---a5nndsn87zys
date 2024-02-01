@@ -1,0 +1,30 @@
+.second_nav{
+    background-color: rgb(12,15,18);
+    color: #ffffffb0;
+
+}
+.second_nav_container{
+    padding: 2rem 0px;
+    display: flex;
+    width: 88%;
+    margin: auto;
+    gap: 3rem;
+}
+
+ .item{
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(163,167,174);
+    padding-bottom: 4px;
+
+    
+}
+.nav_items:hover .item{
+    border-bottom: 2px solid rgb(210, 209, 209);
+}
+/* .active{
+    font-weight: bolder;
+    color: white;
+    border-color: white;
+} */
