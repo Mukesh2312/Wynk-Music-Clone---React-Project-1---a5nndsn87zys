@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/Register.css';
 
 const Register = () => {
 
+    const [getData, setData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        appType: 'music'
+
+    })
     const onSubmitHandler = (e) => {
         e.preventDefault();
         alert("Form Submitted");
+    }
+
+    const onChangerHandler = () => {
+        console.log(getData)
     }
     return (
         <div className="Register_container">
@@ -17,12 +28,12 @@ const Register = () => {
                 </div>
                 <div className="register_form">
                     <form onSubmit={onSubmitHandler}>
-                        <input type="text" name="name" id="name" placeholder="Name" required autoComplete="off" />
-                        <input type="text" name="email" id="email" placeholder="Email" required autoComplete="off" />
-                        <input type="password" name="password" id="password" placeholder="Password" required autoComplete="off" />
+                        <input type="text" name="name" value={getData.name} id="name" placeholder="Name" required autoComplete="off" onChange={onChangerHandler} />
+                        <input type="text" name="email" value={getData.email} id="email" placeholder="Email" required autoComplete="off" onChange={onChangerHandler} />
+                        <input type="password" name="password" value={getData.password} id="password" placeholder="Password" required autoComplete="off" onChange={onChangerHandler} />
 
-                        <label htmlFor="appType">App Type</label>
-                        <select name="appType" id="appType" required>
+                        <label htmlFor="appType" >App Type</label>
+                        <select name="appType" onChange={onChangerHandler} id="appType" required>
                             <option value="music">music</option>
                             <option value="album">album</option>
                         </select>
