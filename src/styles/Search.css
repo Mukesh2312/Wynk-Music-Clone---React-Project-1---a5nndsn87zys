@@ -1,0 +1,9 @@
+.search_container{
+    /* height: 83vh; */
+    padding-top: 3rem;
+    background-color: rgb(12,15,18);
+    color: #ffffffb0;
+    /* display: grid;
+    place-content: center; */
+    text-align: center;
+}

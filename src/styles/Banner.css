@@ -1,0 +1,22 @@
+.Banner_container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner_img_container:focus-visible{
+    outline: none;
+}
+.banner_img_container img{
+ 
+    border-radius: 17px;
+}
+/* .slick-arrow{
+    
+     z-index: 10; 
+}
+.slick-prev {
+    left: 6%;
+}
+.slick-next {
+    right: 6%;
+} */

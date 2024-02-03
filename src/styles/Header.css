@@ -2,7 +2,7 @@
     width: 100%;
     background-color: rgb(27,27,27);
     max-width: 1920px;
-    padding: 15px 0;
+    padding: 15px 0 0;
 
 }
 
@@ -12,13 +12,21 @@
     width: 90%;
     margin: auto;
     align-items: center; 
+    margin-bottom: 15px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: rgb(110,110,110);
+    color: rgba(255, 255, 255, 0.841);
+}
+#logo_text{
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.841);
+
 }
 .logo_container img{
     width: 60px;
@@ -31,18 +39,19 @@
 
 .login_btn{
     text-decoration: none;
-    color: rgb(110,110,110);
+    color: rgba(255, 255, 255, 0.841);
+
     transition: 0.02s;
     font-size: 18px;
     display: flex;
 }
 .faUser{
     font-size: 25px;
-    color: #fff9;
     transition: 0.2s;
 }
 .login_btn .faUser:hover{
-    color: #fffffff0;
+    color: rgb(110,110,110);
+
 }
 .header_items_container input {
     border: 1px solid #ffffff30;
@@ -54,7 +63,9 @@
     color: #aaaaaa;
 
 }
-
+.search_navlink{
+    text-decoration: none;
+}
 .header_items_container input[type="text"]:focus-visible{
     outline: none;
     color: #aaaaaa;
@@ -62,7 +73,25 @@
 
 .header_links_container{
     position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 .nesteddrop{
     position: absolute;
+}
+.subcription{
+    display: flex;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.841);
+    cursor: pointer;
+    font-weight: 400;
+}
+.subcription:hover{
+    color: rgb(110,110,110);
+}
+
+.vertical_line{
+    border: 1px solid gray;
+    height: 31px;
 }
