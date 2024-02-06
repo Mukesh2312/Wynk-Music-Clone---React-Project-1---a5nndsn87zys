@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
 import '../styles/Register.css';
+import { useUser } from './UserProvider';
 
 import axios from 'axios'
 
@@ -15,6 +16,7 @@ const Login = () => {
     })
     const [getError, setError] = useState('');
 
+    const { signInUser } = useUser();
 
     const onSubmitHandler = (e) => {
         setError('')
@@ -22,7 +24,8 @@ const Login = () => {
 
         axios.post("https://academics.newtonschool.co/api/v1/user/login", getData).then((response) => {
             navigate('/')
-            console.log(response)
+            console.log(response.data)
+            signInUser({ status: response.data.status, token: response.data.token })
 
         }).catch((error) => {
             console.log(error);
@@ -55,7 +58,7 @@ const Login = () => {
 
                     <form onSubmit={onSubmitHandler} >
                         <input type="text" name='email' value={getData.email} id='email' autoComplete='off' placeholder='Email Address' required onChange={onChangerHandler} />
-                        <input type="password" name='password' value={getData.password} id='email' autoComplete='off' placeholder='Password' required onChange={onChangerHandler} />
+                        <input type="password" name='password' value={getData.password} id='password' autoComplete='off' placeholder='Password' required onChange={onChangerHandler} />
                         <label htmlFor="appType" >App Type</label>
                         <select name="appType" onChange={onChangerHandler} id="appType" required>
                             <option value="music">music</option>

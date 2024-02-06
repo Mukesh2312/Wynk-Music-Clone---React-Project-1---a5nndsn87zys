@@ -55,6 +55,9 @@ const Header = () => {
                         </span>
                         <p>Manage Subscription</p>
                     </div>
+                    <div className="fevorite_songs">
+                        <NavLink to='/fevorite' className='f_songs_nv_link'>Fevorite</NavLink>
+                    </div>
                     <div className="vertical_line">
 
                     </div>

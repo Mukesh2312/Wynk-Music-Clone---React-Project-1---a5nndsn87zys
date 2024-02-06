@@ -1,0 +1,11 @@
+.f_songs_nv_link{
+    text-decoration: none;
+   
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.841);
+    cursor: pointer;
+    font-weight: 400;
+}
+.f_songs_nv_link:hover {
+    color: rgb(110,110,110);
+}
