@@ -30,6 +30,7 @@ const Fevorite = () => {
 
 
 
+
             //fetching with axios;
             axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
                 // console.log(Response);
