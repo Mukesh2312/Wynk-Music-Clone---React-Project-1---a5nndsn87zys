@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-=======
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
->>>>>>> f5cbfa3e5db6fea98baa219587c7715879d61a2e
 import '../styles/Register.css';
 
 const Register = () => {
@@ -14,15 +11,6 @@ const Register = () => {
         password: '',
         appType: 'music'
 
-<<<<<<< HEAD
-    const [getData, setData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        appType: 'music'
-
-=======
->>>>>>> f5cbfa3e5db6fea98baa219587c7715879d61a2e
     })
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -38,10 +26,6 @@ const Register = () => {
     const onChangerHandler = (e) => {
         setData({ ...getData, [e.target.name]: e.target.value })
 
-    }
-
-    const onChangerHandler = () => {
-        console.log(getData)
     }
     return (
         <div className="Register_container">
