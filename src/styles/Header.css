@@ -49,6 +49,10 @@
     font-size: 25px;
     transition: 0.2s;
 }
+.user_info{
+    display: flex;
+    gap: 1rem;
+}
 .login_btn .faUser:hover{
     color: rgb(110,110,110);
 

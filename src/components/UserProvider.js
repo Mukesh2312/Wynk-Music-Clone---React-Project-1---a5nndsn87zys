@@ -5,14 +5,25 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
 
     const [getUser, setUser] = useState(null)
+    const [getList, setList] = useState([]);
+
 
     const signInUser = (input) => {
         setUser(input);
     }
 
+    const singOutUser = () => {
+        setUser(null);
+    }
+    const upDateSongs = (input) => {
+        setList(input);
+    }
     const obj = {
         getUser,
-        signInUser
+        signInUser,
+        singOutUser,
+        upDateSongs,
+        getList
     }
     return (
         <>

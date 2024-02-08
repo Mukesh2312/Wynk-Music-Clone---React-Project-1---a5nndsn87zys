@@ -8,9 +8,9 @@ import SecondryNav from "./SecondryNav";
 
 
 
+
 const Header = () => {
 
-    const [list, setList] = useState([])
 
     const onSearchHandler = (event) => {
         let searchQuery = {
@@ -61,10 +61,17 @@ const Header = () => {
                     <div className="vertical_line">
 
                     </div>
-                    <ul>
+                    <ul className="user_info">
+                        <li>
+                            <NavLink to='/login' className='login_btn'>
+                                {/* <FaUser className="faUser" /> */}
+                                Login
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink to='/register' className='login_btn'>
-                                <FaUser className="faUser" />
+                                {/* <FaUser className="faUser" /> */}
+                                Singup
                             </NavLink>
                         </li>
 
