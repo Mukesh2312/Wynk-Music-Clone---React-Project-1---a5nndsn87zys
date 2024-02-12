@@ -4,13 +4,12 @@ import Loader from "./Loader";
 import axios from "axios";
 import Banner from "./Banner";
 // import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { useUser } from "./UserProvider";
+
 
 const Home = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
-    const { getUser } = useUser()
-    // console.log(getUser)
+
 
     useEffect(() => {
 
@@ -43,6 +42,9 @@ const Home = () => {
         setLoader(true)
         Songs()
     }, [])
+
+
+
     return (
         <div className="music-collection">
             <div className="banner_contianer_for_margin">

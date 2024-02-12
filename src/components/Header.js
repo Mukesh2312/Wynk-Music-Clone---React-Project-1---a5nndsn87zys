@@ -45,7 +45,7 @@ const Header = () => {
                     <div className="search_box">
                         <NavLink to='/search' className='search_navlink'>
 
-                            <input type="text" placeholder="Search Music" onChange={onSearchHandler} />
+                            <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
                         </NavLink>
                     </div>
                     <div className="subcription">
