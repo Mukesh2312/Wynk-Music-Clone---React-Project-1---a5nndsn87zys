@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/AlbumDetaile.css'
-import axios from "axios";
+import { FaHeart } from 'react-icons/fa';
 import { useUser } from './UserProvider';
 
 
@@ -69,7 +69,7 @@ function AlbumDetail() {
                                         3:45
                                     </div>
                                     <div className="like_button">
-                                        like
+                                        <FaHeart />
                                     </div>
 
                                 </div>

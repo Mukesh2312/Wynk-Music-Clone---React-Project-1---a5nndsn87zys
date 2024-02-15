@@ -12,8 +12,7 @@ function Search() {
     console.log(upDateSongs)
     return (
         <div className='search_container'>
-            {/* <h1 style={{ color: 'white' }}>Search Result will be here</h1> */}
-            <AlbumDetail />
+            <h1 style={{ color: 'white' }}>Search Result will be here</h1>
         </div>
     )
 }

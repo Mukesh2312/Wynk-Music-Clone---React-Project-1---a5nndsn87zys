@@ -15,7 +15,47 @@ function Banner() {
         autoplay: true,
         centerPadding: "310px",
         slidesToShow: 1,
-        speed: 400
+        speed: 400,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    autoplay: true,
+                    centerPadding: "310px",
+                    slidesToShow: 1,
+                    speed: 400,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    autoplay: true,
+                    centerPadding: "310px",
+                    slidesToShow: 1,
+                    speed: 400,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    autoplay: true,
+                    centerPadding: "20px",
+                    slidesToShow: 1,
+                    speed: 400,
+
+                }
+            }
+        ]
+
     };
 
     return (
