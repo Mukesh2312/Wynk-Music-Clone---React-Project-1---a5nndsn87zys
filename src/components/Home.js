@@ -5,12 +5,26 @@ import axios from "axios";
 import Banner from "./Banner";
 // import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
+import { useUser } from "./UserProvider";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
 
+    const { setList } = useUser();
+    const navigate = useNavigate()
 
+    const onclickAlbum = async (id) => {
+        axios.get(`https://academics.newtonschool.co/api/v1/music/album/${id}`).then((response) => {
+            // console.log(response.data.data)
+            setList(response.data.data);
+            navigate(`/Album`)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
     useEffect(() => {
 
 
@@ -31,7 +45,7 @@ const Home = () => {
 
             //fetching with axios;
             axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
-                // console.log(Response);
+                // console.log(Response.data.data);
                 let data = Response.data.data;
                 setMusic(data)
                 setLoader(false);
@@ -42,6 +56,8 @@ const Home = () => {
         setLoader(true)
         Songs()
     }, [])
+
+
 
 
 
@@ -62,7 +78,7 @@ const Home = () => {
                     {
                         music.map((song) => {
                             return (
-                                <div className="song_inner_container" key={song._id}>
+                                <div className="song_inner_container" key={song._id} onClick={() => onclickAlbum(song._id)}>
                                     <div className="song_thumbnail">
                                         <img src={song.image} alt={song.title} />
                                         <div className="overlay">

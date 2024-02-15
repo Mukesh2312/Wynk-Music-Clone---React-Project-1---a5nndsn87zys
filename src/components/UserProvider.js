@@ -23,7 +23,8 @@ export const UserProvider = ({ children }) => {
         signInUser,
         singOutUser,
         upDateSongs,
-        getList
+        getList,
+        setList
     }
     return (
         <>

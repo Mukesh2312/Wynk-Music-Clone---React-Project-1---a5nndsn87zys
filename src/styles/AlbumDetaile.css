@@ -1,11 +1,13 @@
 .album_detail_section {
-    width: 90%;
-    margin: auto;
+   width: 100%;
     color: white;
+    background-color: rgb(12,15,18);
 }
 .album_song_container{
     display: flex;
     gap: 6rem;
+    width: 90%;
+    margin: auto;
 }
 .left_content {
     width: 20%;
@@ -21,10 +23,11 @@
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
 }
 .header_right_content {
     text-align: left;
+    margin-bottom: 3rem;
 }
 .songs_list_container {
     display: flex;

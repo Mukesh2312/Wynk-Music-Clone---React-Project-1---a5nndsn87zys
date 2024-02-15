@@ -9,6 +9,7 @@ import axios from "axios";
 import Search from "./Search";
 import Fevorite from "./Fevorite";
 import { useUser } from "./UserProvider";
+import AlbumDetail from "./AlbumDetail";
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Songs" element={<Songs />} />
+          <Route path="/Album" element={<AlbumDetail />} />
           <Route path="/Fevorite" element={<ProtectedRout>
             <Fevorite />
           </ProtectedRout>} />
