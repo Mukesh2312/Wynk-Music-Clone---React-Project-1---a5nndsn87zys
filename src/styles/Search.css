@@ -1,9 +1,19 @@
 .search_container{
-    /* height: 83vh; */
-    padding-top: 3rem;
+    height: 83vh;
+    padding: 3rem 0 3rem 0;
     background-color: rgb(12,15,18);
     color: #ffffffb0;
     /* display: grid;
     place-content: center; */
     text-align: center;
+}
+.song_container {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.song_img img {
+    width: 50px;
 }

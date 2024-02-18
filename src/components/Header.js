@@ -5,23 +5,30 @@ import '../styles/Header.css'
 import { FaUser } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
 import SecondryNav from "./SecondryNav";
+import { useUser } from "./UserProvider";
 
 
 
 
 const Header = () => {
 
+    const { upDateSongs, getUser, singOutUser } = useUser();
 
     const onSearchHandler = (event) => {
         let searchQuery = {
             title: event.target.value
         }
         axios.get('https://academics.newtonschool.co/api/v1/music/song?', { params: { search: JSON.stringify(searchQuery) } })
-            .then((Response) => {
-                setList(response.data.data)
+            .then((response) => {
+                console.log(response.data.data)
+                upDateSongs(response.data.data)
             }).catch((error) => {
                 console.log(error)
             })
+    }
+
+    const onChangeHandler = () => {
+        singOutUser()
     }
 
     return (
@@ -62,19 +69,25 @@ const Header = () => {
 
                     </div>
                     <ul className="user_info">
-                        <li>
-                            <NavLink to='/login' className='login_btn'>
-                                {/* <FaUser className="faUser" /> */}
-                                Login
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/register' className='login_btn'>
-                                {/* <FaUser className="faUser" /> */}
-                                Singup
-                            </NavLink>
-                        </li>
+                        {
+                            !getUser && <>
+                                <li>
+                                    <NavLink to='/login' className='login_btn'>
+                                        {/* <FaUser className="faUser" /> */}
+                                        Login
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/register' className='login_btn'>
 
+                                        Singup
+                                    </NavLink>
+                                </li>
+                            </>
+                        }
+                        {getUser && getUser.status == "success" && <li>
+                            <NavLink to="/" className='login_btn' onClick={onChangeHandler}>Logout</NavLink>
+                        </li>}
                     </ul>
                 </div>
             </div>

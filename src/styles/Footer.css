@@ -25,6 +25,7 @@
 }
 .para h2{
     color: rgba(255,255,255);
+    font-weight: 500;
     
 }
 .para p{
@@ -46,8 +47,9 @@
     gap: 1rem;
 }
 
-.left_img_container svg {
+.left_img_container img {
     width: 70px;
+    border-radius: 50%;
 }
 .txt_container {
     line-height: 1.6;
