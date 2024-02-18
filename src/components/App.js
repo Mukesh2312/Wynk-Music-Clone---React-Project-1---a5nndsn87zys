@@ -10,6 +10,7 @@ import Search from "./Search";
 import Fevorite from "./Fevorite";
 import { useUser } from "./UserProvider";
 import AlbumDetail from "./AlbumDetail";
+import Footer from "./Footer";
 
 
 
@@ -46,6 +47,7 @@ function App() {
             <Fevorite />
           </ProtectedRout>} />
         </Routes>
+        <Footer />
 
       </Router>
     </div>
