@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/Banner.css'
-import CustomSlickArrows from './CustomSlickArrows';
+
 
 
 
@@ -24,7 +24,7 @@ function Banner() {
                     centerMode: true,
                     infinite: true,
                     autoplay: true,
-                    centerPadding: "310px",
+                    centerPadding: "60px",
                     slidesToShow: 1,
                     speed: 400,
                 }
@@ -36,7 +36,7 @@ function Banner() {
                     centerMode: true,
                     infinite: true,
                     autoplay: true,
-                    centerPadding: "310px",
+                    centerPadding: "30px",
                     slidesToShow: 1,
                     speed: 400,
                 }
@@ -48,9 +48,10 @@ function Banner() {
                     centerMode: true,
                     infinite: true,
                     autoplay: true,
-                    centerPadding: "20px",
+                    centerPadding: "10px",
                     slidesToShow: 1,
                     speed: 400,
+
 
                 }
             }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 
 import '../styles/Header.css'
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
 import SecondryNav from "./SecondryNav";
 import { useUser } from "./UserProvider";
@@ -13,6 +13,8 @@ import { useUser } from "./UserProvider";
 const Header = () => {
 
     const { upDateSongs, getUser, singOutUser } = useUser();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
     const onSearchHandler = (event) => {
         let searchQuery = {
@@ -29,6 +31,11 @@ const Header = () => {
 
     const onChangeHandler = () => {
         singOutUser()
+    }
+
+    const sideBarHandler = () => {
+        console.log('sidebar')
+        setIsMenuOpen(!isMenuOpen)
     }
 
     return (
@@ -90,7 +97,34 @@ const Header = () => {
                         </li>}
                     </ul>
                 </div>
+
+                {/* it will visible only on small device */}
+                <div className="hamburger_menu">
+                    {
+                        <FaBars style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }} onClick={sideBarHandler} />
+                    }
+                </div>
+
+                <div className="small_logo_container">
+                    <NavLink to='/' className="logo">
+
+                        <img src="https://img.icons8.com/color-glass/144/wynk-music.png" alt="logo" />
+
+                    </NavLink>
+                </div>
+                <div className="search_box">
+                    <NavLink to='/search' className='search_navlink'>
+
+                        <FaSearch style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }}>
+
+                            <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
+                        </FaSearch>
+                    </NavLink>
+                </div>
             </div>
+
+
+
             <SecondryNav />
 
         </header>

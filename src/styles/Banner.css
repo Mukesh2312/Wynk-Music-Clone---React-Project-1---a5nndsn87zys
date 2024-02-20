@@ -1,6 +1,8 @@
 .Banner_container{
     width: 100%;
     overflow: hidden;
+    position:relative;
+    
 }
 
 .banner_img_container:focus-visible{
