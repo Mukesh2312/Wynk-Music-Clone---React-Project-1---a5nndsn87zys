@@ -42,10 +42,14 @@
 .login_btn{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.841);
-
+    font-weight: 400;
     transition: 0.02s;
-    font-size: 18px;
+    /* font-size: 18px; */
     display: flex;
+}
+
+.login_btn:hover{
+    color: rgb(110,110,110);
 }
 .faUser{
     font-size: 25px;

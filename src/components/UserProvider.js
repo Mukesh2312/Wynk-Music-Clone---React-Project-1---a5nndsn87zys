@@ -6,6 +6,8 @@ export const UserProvider = ({ children }) => {
 
     const [getUser, setUser] = useState(null)
     const [getList, setList] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
+
 
 
     const signInUser = (input) => {
@@ -18,7 +20,13 @@ export const UserProvider = ({ children }) => {
     const upDateSongs = (input) => {
         setList(input);
     }
+    const modalHandler = (input) => {
+        setIsOpen(input)
+        console.log(isOpen)
+    }
     const obj = {
+        modalHandler,
+        isOpen,
         getUser,
         signInUser,
         singOutUser,

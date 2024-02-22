@@ -38,7 +38,7 @@ function AlbumDetail() {
                         getList.songs.map((song, index) => {
                             return (
                                 <div className="songs_list_container" key={index}>
-                                    <div className="songs-details">
+                                    <div className="songs-details ">
                                         <div className="serial_no">
                                             {index + 1}
                                         </div>
@@ -52,7 +52,7 @@ function AlbumDetail() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="artist_info">
+                                    <div className="artist_info songs_item">
                                         {/* {
                                             song.artist.map((artist, index) => {
                                                 return (
@@ -62,13 +62,13 @@ function AlbumDetail() {
                                         } */}
                                         Artist
                                     </div>
-                                    <div className="album_detail">
+                                    <div className="album_detail songs_item">
                                         album details
                                     </div>
-                                    <div className="song_lenght">
+                                    <div className="song_lenght songs_item">
                                         3:45
                                     </div>
-                                    <div className="like_button">
+                                    <div className="like_button songs_item">
                                         <FaHeart />
                                     </div>
 
