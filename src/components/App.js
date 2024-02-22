@@ -11,6 +11,8 @@ import Fevorite from "./Fevorite";
 import { useUser } from "./UserProvider";
 import AlbumDetail from "./AlbumDetail";
 import Footer from "./Footer";
+import '../index.css'
+import SubscriptionModal from "./SubscriptionModal";
 
 
 
@@ -43,6 +45,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Songs" element={<Songs />} />
           <Route path="/Album" element={<AlbumDetail />} />
+          <Route path="/modal" element={<SubscriptionModal />} />
           <Route path="/Fevorite" element={<ProtectedRout>
             <Fevorite />
           </ProtectedRout>} />
