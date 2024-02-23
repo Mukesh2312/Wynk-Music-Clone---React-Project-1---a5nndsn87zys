@@ -17,7 +17,7 @@ const Home = () => {
     const navigate = useNavigate()
 
     const onclickAlbum = async (id) => {
-        axios.get(`https://academics.newtonschool.co/api/v1/music/album/${id}`).then((response) => {
+        await axios.get(`https://academics.newtonschool.co/api/v1/music/album/${id}`).then((response) => {
             // console.log(response.data.data)
             setList(response.data.data);
             navigate(`/Album`)
@@ -44,7 +44,7 @@ const Home = () => {
 
 
             //fetching with axios;
-            axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
+            await axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
                 // console.log(Response.data.data);
                 let data = Response.data.data;
                 setMusic(data)
