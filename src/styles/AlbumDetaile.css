@@ -71,3 +71,40 @@
 /* .songs_item{
     width: 20%;
 } */
+
+@media (min-width: 420px) and (max-width: 600px) {
+    .left_content {
+        
+        display: none;
+    }
+    .right_content {
+        width: 95%;
+    }
+    .header_right_content {
+        margin-bottom: 1rem;
+        padding-left: 10px;
+    }
+    .album_heading {
+        margin-bottom: 8px;
+        font-size: 25px;
+        margin-top: 1rem;
+    }
+    .album_length {
+        font-size: 14px;
+        color: gray;
+    }
+    .artist_info {
+        display: none;
+    }
+    .album_detail {
+        display: none;
+    }
+    .song_name_contianer {
+        max-width: 8rem;
+        overflow: hidden;
+        font-size: 12px;
+    }
+    .songs_item {
+        font-size: 12px;
+    }
+}

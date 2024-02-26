@@ -70,3 +70,20 @@
 .banner_contianer_for_margin{
     margin-bottom: 4rem;
 }
+
+@media (min-width: 420px) and (max-width: 600px) {
+ 
+  .songs_outer_container{
+    width: 100%;
+    justify-content: center;
+  }
+  .song_inner_container{
+    width: calc((100% - 10px) / 4);
+    margin: 10px;
+    min-width: 3rem;
+  }
+  .song_inner_container h4{
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

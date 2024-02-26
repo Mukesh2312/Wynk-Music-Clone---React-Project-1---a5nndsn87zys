@@ -59,3 +59,28 @@
     align-items: center;
     gap: 1rem;
 }
+@media (min-width: 420px) and (max-width: 600px) {
+    .footer_top_content{
+        padding: 30px 0 0 9px;
+    }
+    .para{
+        width: 95%;
+        font-size: 14px;
+    }
+    .app_container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .txt_container {
+        line-height: 1.5;
+    }
+    .txt_container h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+    }
+    .txt_container p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
