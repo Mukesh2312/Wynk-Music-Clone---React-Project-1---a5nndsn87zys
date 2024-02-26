@@ -24,7 +24,7 @@ const Songs = () => {
             // console.log(data.data);
 
             //fetching with axios;
-            await axios.get('https://academics.newtonschool.co/api/v1/music/song').then((Response) => {
+            await axios.get('https://academics.newtonschool.co/api/v1/music/song?limit=600').then((Response) => {
                 console.log(Response.data.data);
                 let data = Response.data.data;
                 setMusic(data)

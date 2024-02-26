@@ -55,3 +55,12 @@
     border-radius: 15px;
     border: 1px solid #00000038;
 }
+
+@media (min-width: 420px) and (max-width: 600px) {
+    .form_container {
+        width: 100%;
+    }
+    .register_form form{
+        width: 85%;
+    }
+}

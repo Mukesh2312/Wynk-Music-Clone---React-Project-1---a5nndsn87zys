@@ -5,13 +5,6 @@
     margin: 2rem 0;
 }
 
-@media (min-width: 420px) and (max-width: 600px) {
-    .form_container {
-        width: 100%;
-    }
-    .register_form form{
-        width: 85%;
-    }
-}
+
 
 
