@@ -1,0 +1,13 @@
+.audio-player{
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(33,37,45);
+    
+}
+.audio-player audio {
+    width: 25vw;
+}

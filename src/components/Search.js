@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/Search.css'
 import { useUser } from './UserProvider';
+import AudioPlayer from './AudioPlayer';
 function Search() {
     const { getList } = useUser();
     console.log(getList)
@@ -22,6 +23,7 @@ function Search() {
                     )
                 })
             }
+            <AudioPlayer />
         </div>
     )
 }

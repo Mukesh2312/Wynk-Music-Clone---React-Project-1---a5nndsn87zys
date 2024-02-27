@@ -13,6 +13,7 @@ import AlbumDetail from "./AlbumDetail";
 import Footer from "./Footer";
 import '../index.css'
 import SubscriptionModal from "./SubscriptionModal";
+import AudioPlayer from "./AudioPlayer";
 
 
 
@@ -51,6 +52,7 @@ function App() {
           </ProtectedRout>} />
         </Routes>
         <Footer />
+        <AudioPlayer />
 
       </Router>
     </div>

@@ -1,16 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/AlbumDetaile.css'
 import { FaHeart } from 'react-icons/fa';
 import { useUser } from './UserProvider';
+import axios from 'axios';
 
 
 function AlbumDetail() {
-    const [album, setAlbum] = useState({ getList });
-
-    const { getList } = useUser()
-    console.log(getList)
 
 
+    const { getList, audioValue, setCurrentItem } = useUser()
+    // console.log(getList)
+    const handleSong = (item) => {
+        audioValue({ item })
+    }
+
+    const handleClick = async (id) => {
+        try {
+            await axios.get(`https://academics.newtonschool.co/api/v1/music/song/${id}`).then((response) => {
+                // console.log(response.data.data)
+                let data = response.data.data
+                // console.log(data)
+                handleSong(data)
+            }).catch((err) => {
+                console.log(err)
+            })
+        } catch (err) {
+            console.log(err.message)
+        }
+    }
 
     return (
         <div className='album_detail_section'>
@@ -37,7 +54,7 @@ function AlbumDetail() {
                     {
                         getList.songs.map((song, index) => {
                             return (
-                                <div className="songs_list_container" key={index}>
+                                <div className="songs_list_container" key={index} onClick={() => handleClick(song._id)}>
                                     <div className="songs-details ">
                                         <div className="serial_no">
                                             {index + 1}

@@ -7,6 +7,7 @@ export const UserProvider = ({ children }) => {
     const [getUser, setUser] = useState(null)
     const [getList, setList] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const [currentItem, setCurrentItem] = useState({});
 
 
 
@@ -24,6 +25,9 @@ export const UserProvider = ({ children }) => {
         setIsOpen(input)
         console.log(isOpen)
     }
+    const audioValue = (input) => {
+        setCurrentItem(input)
+    }
     const obj = {
         modalHandler,
         isOpen,
@@ -32,7 +36,10 @@ export const UserProvider = ({ children }) => {
         singOutUser,
         upDateSongs,
         getList,
-        setList
+        setList,
+        audioValue,
+        currentItem
+
     }
     return (
         <>
