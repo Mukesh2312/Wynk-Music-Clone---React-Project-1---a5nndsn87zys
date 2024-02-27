@@ -123,7 +123,7 @@ const Header = () => {
 
                     </NavLink>
                 </div>
-                <div className="search_box">
+                <div className="Small-search_box">
                     <NavLink to='/search' className='search_navlink'>
 
                         <FaSearch style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }}>
