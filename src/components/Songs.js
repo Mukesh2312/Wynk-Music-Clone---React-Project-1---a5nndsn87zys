@@ -59,6 +59,8 @@ const Songs = () => {
             console.log(err.message)
         }
     }
+
+
     return (
         <div className="music-collection">
 
@@ -69,7 +71,7 @@ const Songs = () => {
 
                         music.map((song) => {
                             return (
-                                <div className="song_inner_container" key={song._id}>
+                                <div className="song_inner_container" key={song._id} >
                                     <div className="song_thumbnail" onClick={() => handleClick(song._id)}>
                                         <img src={song.thumbnail} alt={song.title} />
                                     </div>

@@ -15,7 +15,7 @@ const Fevorite = () => {
     useEffect(() => {
 
 
-        const Songs = async () => {
+        const Songs = async (songId) => {
             //fetcing with fetch();
             // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
             //     headers: {
@@ -32,9 +32,14 @@ const Fevorite = () => {
 
 
             //fetching with axios;
-            axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
+            axios.get('https://academics.newtonschool.co/api/v1/music/favorites/like', {
+                headers: {
+                    Authorization: `Bearer ${getUser?.token}`
+                }
+            }).then((Response) => {
                 // console.log(Response);
                 let data = Response.data.data;
+                console.log(data)
                 setMusic(data)
                 setLoader(false);
             }).catch((error) => {
@@ -54,7 +59,7 @@ const Fevorite = () => {
                 <div className="songs_outer_container">
 
                     {
-                        music.map((song) => {
+                        music?.map((song) => {
                             return (
                                 <div className="song_inner_container" key={song._id}>
                                     <div className="song_thumbnail">
