@@ -10,7 +10,7 @@ const Fevorite = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
     const { getUser } = useUser()
-    console.log(getUser)
+    // console.log(getUser)
 
     useEffect(() => {
 
@@ -32,13 +32,13 @@ const Fevorite = () => {
 
 
             //fetching with axios;
-            axios.get('https://academics.newtonschool.co/api/v1/music/favorites/like', {
+            await axios.get('https://academics.newtonschool.co/api/v1/music/favorites/like', {
                 headers: {
                     Authorization: `Bearer ${getUser?.token}`
                 }
             }).then((Response) => {
                 // console.log(Response);
-                let data = Response.data.data;
+                let data = Response.data.data.songs;
                 console.log(data)
                 setMusic(data)
                 setLoader(false);
@@ -49,32 +49,39 @@ const Fevorite = () => {
         setLoader(true)
         Songs()
     }, [])
+
+    // console.log(music)
     return (
-        <div className="music-collection">
+        <div className="music-collection ">
+
+            <div className="fav_songs_container">
 
 
 
-            {loader ? <Loader /> :
 
-                <div className="songs_outer_container">
+                <h2 className="fav_songs">Favorite Songs</h2>
+                {loader ? <Loader /> :
 
-                    {
-                        music?.map((song) => {
-                            return (
-                                <div className="song_inner_container" key={song._id}>
-                                    <div className="song_thumbnail">
-                                        <img src={song.image} alt={song.title} />
-                                        <div className="overlay">
-                                            <span className="play-button">&#9654;</span>
+                    <div className="songs_outer_containe">
+
+                        {
+                            music?.map((song) => {
+                                return (
+                                    <div className="song_inner_container" key={song._id}>
+                                        <div className="song_thumbnail">
+                                            <img src={song.thumbnail} alt={song.title} />
+                                            <div className="overlay">
+                                                <span className="play-button">&#9654;</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <h4>{song.title}</h4>
+                                        <h4>{song.title}</h4>
 
-                                </div>
-                            )
-                        })
-                    }
-                </div>}
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>}
+            </div>
         </div>
     )
 }

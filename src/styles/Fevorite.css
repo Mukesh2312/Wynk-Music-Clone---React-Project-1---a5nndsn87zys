@@ -9,3 +9,20 @@
 .f_songs_nv_link:hover {
     color: rgb(110,110,110);
 }
+
+.fav_songs_container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+.songs_outer_containe {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.fav_songs {
+    padding-left: 1rem;
+    margin: 2rem 0 1rem 0;
+}

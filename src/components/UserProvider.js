@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
     const [getList, setList] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [currentItem, setCurrentItem] = useState({});
+    const [searchSong, setSearchSong] = useState([])
 
 
 
@@ -19,7 +20,7 @@ export const UserProvider = ({ children }) => {
         setUser(null);
     }
     const upDateSongs = (input) => {
-        setList(input);
+        setSearchSong(input)
     }
     const modalHandler = (input) => {
         setIsOpen(input)
@@ -34,11 +35,13 @@ export const UserProvider = ({ children }) => {
         getUser,
         signInUser,
         singOutUser,
-        upDateSongs,
         getList,
         setList,
         audioValue,
-        currentItem
+        currentItem,
+        upDateSongs,
+        searchSong,
+
 
     }
     return (

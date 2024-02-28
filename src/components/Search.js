@@ -3,14 +3,14 @@ import '../styles/Search.css'
 import { useUser } from './UserProvider';
 import AudioPlayer from './AudioPlayer';
 function Search() {
-    const { getList } = useUser();
-    console.log(getList)
+    const { searchSong } = useUser();
+
 
     return (
         <div className='search_container'>
             <h1 style={{ color: 'white' }}>Search Result will be here</h1>
             {
-                getList.map((song, index) => {
+                searchSong?.map((song, index) => {
                     return (
                         <div className="song_container" key={index}>
                             <div className="song_img">

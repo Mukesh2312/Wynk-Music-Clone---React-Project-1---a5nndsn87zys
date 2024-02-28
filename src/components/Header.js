@@ -17,6 +17,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
+    console.log(upDateSongs)
     const onSearchHandler = (event) => {
         let searchQuery = {
             title: event.target.value
@@ -29,7 +30,6 @@ const Header = () => {
                 console.log(error)
             })
     }
-
     const onChangeHandler = () => {
         singOutUser()
     }
