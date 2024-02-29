@@ -79,11 +79,11 @@ function AlbumDetail() {
                             {getList.title}
                         </h1>
                         <p className='album_length'>
-                            songs: {getList.songs.length}
+                            songs: {getList.songs?.length}
                         </p>
                     </div>
                     {
-                        getList.songs.map((song, index) => {
+                        getList.songs?.map((song, index) => {
                             return (
                                 <div className="songs_list_container" key={index} onClick={() => handleClick(song._id)}>
                                     <div className="songs-details ">
