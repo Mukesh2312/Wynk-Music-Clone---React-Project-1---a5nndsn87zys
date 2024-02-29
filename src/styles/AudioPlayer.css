@@ -11,3 +11,35 @@
 .audio-player audio {
     width: 25vw;
 }
+#current_playing_song{
+    width: 50px;
+    border-radius: 5px
+}
+#current_playing_song_title{
+    color: #ffffffae;
+    font-weight: 400;
+}
+.music_playing_controler{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+
+
+}
+.thumbnail_title_container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.current_artist{
+    color: gray;
+    font-size: 10px;
+
+}
+.current_artist_container {
+    text-align: left;
+    line-height: 1.1;
+}
+#audio_player_control{
+    color: red;
+}

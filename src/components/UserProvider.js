@@ -4,7 +4,7 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
 
-    const [getUser, setUser] = useState(null)
+    const [getUser, setUser] = useState(localStorage.getItem('token') ? { token: localStorage.getItem('token'), status: 'success' } : null)
     const [getList, setList] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [currentItem, setCurrentItem] = useState({});

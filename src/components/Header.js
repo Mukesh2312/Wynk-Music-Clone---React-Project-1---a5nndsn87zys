@@ -17,25 +17,26 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
-    console.log(upDateSongs)
+    // console.log(upDateSongs)
     const onSearchHandler = (event) => {
         let searchQuery = {
             title: event.target.value
         }
         axios.get('https://academics.newtonschool.co/api/v1/music/song?', { params: { search: JSON.stringify(searchQuery) } })
             .then((response) => {
-                console.log(response.data.data)
+                // console.log(response.data.data)
                 upDateSongs(response.data.data)
             }).catch((error) => {
                 console.log(error)
             })
     }
     const onChangeHandler = () => {
+        localStorage.removeItem('token')
         singOutUser()
     }
 
     const sideBarHandler = () => {
-        console.log('sidebar')
+        // console.log('sidebar')
         setIsMenuOpen(!isMenuOpen)
     }
 

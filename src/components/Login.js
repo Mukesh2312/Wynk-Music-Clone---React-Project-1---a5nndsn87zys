@@ -25,6 +25,7 @@ const Login = () => {
         axios.post("https://academics.newtonschool.co/api/v1/user/login", getData).then((response) => {
             navigate('/')
             console.log(response.data)
+            localStorage.setItem('token', response.data.token)
             signInUser({ status: response.data.status, token: response.data.token })
 
         }).catch((error) => {
