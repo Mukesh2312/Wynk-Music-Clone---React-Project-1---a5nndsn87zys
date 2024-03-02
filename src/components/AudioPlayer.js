@@ -11,7 +11,7 @@ function AudioPlayer(props) {
     console.log(songData, 'songdata')
 
     const likeSong = async (songId) => {
-        //fetcing with fetch();
+        //fetcing with fetch(); 
         // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
         //     headers: {
         //         'projectId': 'a5nndsn87zys'
@@ -36,11 +36,14 @@ function AudioPlayer(props) {
         }).then((Response) => {
             // console.log(Response);
             let data = Response.data.data;
+            console.log('liked')
 
         }).catch((error) => {
             console.log(error);
         })
     }
+
+
 
     return (
         <div className="audio-player">

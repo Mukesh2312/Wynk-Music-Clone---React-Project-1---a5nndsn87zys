@@ -1,4 +1,12 @@
-.heart_icon{
-    color: #fff;
-    cursor: pointer;
+
+.like_button{
+    display: flex;
+    align-items: center;
 }
+.like_button svg {
+    cursor: pointer;
+    fill: #ffffffe0;
+    width: 16px;
+    height: 16px;
+}
+
