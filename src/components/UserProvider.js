@@ -24,7 +24,7 @@ export const UserProvider = ({ children }) => {
     }
     const modalHandler = (input) => {
         setIsOpen(input)
-        console.log(isOpen)
+
     }
     const audioValue = (input) => {
         setCurrentItem(input)

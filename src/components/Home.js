@@ -3,7 +3,7 @@ import '../styles/Songs.css'
 import Loader from "./Loader";
 import axios from "axios";
 import Banner from "./Banner";
-// import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
@@ -97,6 +97,7 @@ const Home = () => {
                         })
                     }
                 </div>}
+
         </div>
     )
 }

@@ -8,6 +8,7 @@ import { useUser } from "./UserProvider";
 
 
 
+
 const Songs = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
@@ -74,6 +75,9 @@ const Songs = () => {
                                 <div className="song_inner_container" key={song._id} >
                                     <div className="song_thumbnail" onClick={() => handleClick(song._id)}>
                                         <img src={song.thumbnail} alt={song.title} />
+                                        <div className="overlay">
+                                            <span className="play-button">&#9654;</span>
+                                        </div>
                                     </div>
                                     <h4>{song.title}</h4>
 

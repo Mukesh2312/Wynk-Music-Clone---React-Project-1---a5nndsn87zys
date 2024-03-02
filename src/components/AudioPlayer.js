@@ -2,11 +2,46 @@ import React from 'react'
 import '../styles/AudioPlayer.css'
 import { useUser } from './UserProvider'
 import LikeButton from './LikeButton'
+import { FaHeart } from 'react-icons/fa'
+import axios from 'axios'
 
 function AudioPlayer(props) {
-    const { currentItem } = useUser()
+    const { currentItem, getUser } = useUser()
     const songData = currentItem.item;
-    console.log(songData)
+    console.log(songData, 'songdata')
+
+    const likeSong = async (songId) => {
+        //fetcing with fetch();
+        // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
+        //     headers: {
+        //         'projectId': 'a5nndsn87zys'
+
+        //     }
+        // });
+        // let data = await response.json();
+        // let results = data.data
+        // console.log(data.data)
+
+
+
+
+
+        //fetching with axios;
+        await axios.patch('https://academics.newtonschool.co/api/v1/music/favorites/like', {
+            "songId": songId
+        }, {
+            headers: {
+                Authorization: `Bearer ${getUser?.token}`
+            }
+        }).then((Response) => {
+            // console.log(Response);
+            let data = Response.data.data;
+
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+
     return (
         <div className="audio-player">
             <div className="music_playing_controler">
@@ -28,6 +63,12 @@ function AudioPlayer(props) {
                 </div>
                 <audio src={songData && songData.audio_url} controls autoPlay id='audio_player_control'></audio>
                 {/* <LikeButton /> */}
+                {
+
+                    songData && <div className="like_button songs_item">
+                        <FaHeart onClick={() => likeSong(songData._id)} />
+                    </div>
+                }
             </div>
         </div>
     )

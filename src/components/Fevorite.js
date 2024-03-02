@@ -9,7 +9,7 @@ import { useUser } from "./UserProvider";
 const Fevorite = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
-    const { getUser } = useUser()
+    const { getUser, audioValue } = useUser()
     // console.log(getUser)
 
     useEffect(() => {
@@ -50,6 +50,19 @@ const Fevorite = () => {
         Songs()
     }, [])
 
+    const setSong = (item) => {
+        audioValue({ item })
+    }
+
+    const handleClick = async (id) => {
+        await axios.get(`https://academics.newtonschool.co/api/v1/music/song/${id}`).then((Response) => {
+            console.log(Response)
+            let currSong = Response.data.data
+            setSong(currSong)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
     // console.log(music)
     return (
         <div className="music-collection ">
@@ -67,7 +80,7 @@ const Fevorite = () => {
                         {
                             music?.map((song) => {
                                 return (
-                                    <div className="song_inner_container" key={song._id}>
+                                    <div className="song_inner_container" key={song._id} onClick={() => handleClick(song._id)}>
                                         <div className="song_thumbnail">
                                             <img src={song.thumbnail} alt={song.title} />
                                             <div className="overlay">
