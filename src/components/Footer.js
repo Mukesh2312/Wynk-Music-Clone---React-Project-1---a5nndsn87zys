@@ -1,5 +1,7 @@
 import React from 'react'
 import '../styles/Footer.css'
+import { NavLink } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 function Footer() {
     return (
         <div id='footer_section'>
@@ -47,6 +49,42 @@ function Footer() {
                         </div>
                     </div>
 
+                </div>
+                <div className="social_link-privacy_policy">
+                    <div className="top_line"></div>
+                    <div className="social_links_container">
+
+                        <div className="left">
+                            <h4>
+                                <NavLink to='/privacy' className='f_link'>
+
+                                    Privacy Policy
+                                </NavLink>
+                            </h4>
+                            <div className="vrLine"></div>
+                            <h4>
+                                <NavLink to='/terms' className='f_link'>
+
+                                    Terms Of Use
+                                </NavLink>
+                            </h4>
+                        </div>
+                        <div className="right">
+                            <div className="fb f-social">
+                                <FaFacebook />
+                            </div>
+                            <div className="insta f-social">
+                                <FaInstagram />
+                            </div>
+                            <div className="twitter f-social">
+                                <FaTwitter />
+                            </div>
+                            <div className="yt f-social">
+                                <FaYoutube />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bottom_line"></div>
                 </div>
             </div>
         </div>

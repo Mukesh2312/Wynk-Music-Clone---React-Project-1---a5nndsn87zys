@@ -1,0 +1,14 @@
+#privacypolicy, .clr{
+    color: rgba(129, 140, 148);
+    margin-bottom: 2rem;
+}
+.txt_container{
+    width: 88%;
+    text-align: justify;
+    margin: auto;
+    line-height: 1.8;  
+}
+.txt_container h2 {
+    margin-bottom: 1em;
+    color: #ffffffbf;
+}

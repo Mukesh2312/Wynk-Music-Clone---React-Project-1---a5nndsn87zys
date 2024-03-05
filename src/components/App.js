@@ -14,6 +14,8 @@ import Footer from "./Footer";
 import '../index.css'
 import SubscriptionModal from "./SubscriptionModal";
 import AudioPlayer from "./AudioPlayer";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfUse from "../pages/TermsOfUse";
 
 
 
@@ -50,6 +52,8 @@ function App() {
           <Route path="/Fevorite" element={<ProtectedRout>
             <Fevorite />
           </ProtectedRout>} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfUse />} />
         </Routes>
         <Footer />
         <AudioPlayer />
