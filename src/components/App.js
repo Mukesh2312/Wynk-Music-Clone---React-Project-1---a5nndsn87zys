@@ -16,6 +16,8 @@ import SubscriptionModal from "./SubscriptionModal";
 import AudioPlayer from "./AudioPlayer";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
+import Album from "./Album";
+import UnderConstruction from "./UnderConstruction";
 
 
 
@@ -47,13 +49,15 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Songs" element={<Songs />} />
-          <Route path="/Album" element={<AlbumDetail />} />
+          <Route path="/Albumdetails" element={<AlbumDetail />} />
           <Route path="/modal" element={<SubscriptionModal />} />
           <Route path="/Fevorite" element={<ProtectedRout>
             <Fevorite />
           </ProtectedRout>} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
+          <Route path="/album" element={<Album />} />
+          <Route path="/underconstruction" element={<UnderConstruction />} />
         </Routes>
         <Footer />
         <AudioPlayer />

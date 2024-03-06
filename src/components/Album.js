@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import '../styles/Songs.css'
 import Loader from "./Loader";
 import axios from "axios";
-import Banner from "./Banner";
+
 
 
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
 
 
-const Home = () => {
+const Album = () => {
     const [music, setMusic] = useState([]);
     const [loader, setLoader] = useState(false);
 
@@ -29,22 +29,8 @@ const Home = () => {
 
 
         const Songs = async () => {
-            //fetcing with fetch();
-            // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
-            //     headers: {
-            //         'projectId': 'a5nndsn87zys'
-
-            //     }
-            // });
-            // let data = await response.json();
-            // let results = data.data
-            // console.log(data.data)
-
-
-
-
             //fetching with axios;
-            await axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
+            await axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=300').then((Response) => {
                 // console.log(Response.data.data);
                 let data = Response.data.data;
                 setMusic(data)
@@ -57,23 +43,9 @@ const Home = () => {
         Songs()
     }, [])
 
-
-
-
-
-
-
-
-
-
     return (
         <div className="music-collection">
-            <div className="banner_contianer_for_margin">
 
-                {
-                    loader ? <Loader /> : <Banner />
-                }
-            </div>
 
 
             {loader ? <Loader /> :
@@ -102,4 +74,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Album;

@@ -1,0 +1,16 @@
+#under_construction {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 60vh;
+}
+.construction_text h1 {
+    color: #c4c0c0;
+}
+.construction_text small {
+    color: lightgray;
+}

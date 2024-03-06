@@ -10,25 +10,25 @@ function SecondryNav() {
                     <NavLink to='/' className='item'>All</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/search' className='item'>Trending Now</NavLink>
+                    <NavLink to='/underconstruction' className='item'>Trending Now</NavLink>
                 </div>
                 <div className="nav_items">
                     <NavLink to='/songs' className='item'>Songs</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/' className='item'>New Songs</NavLink>
+                    <NavLink to='/underconstruction' className='item'>New Songs</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/' className='item'>Moods & Genre</NavLink>
+                    <NavLink to='/underconstruction' className='item'>Moods & Genre</NavLink>
                 </div>
                 <div className="nav_items">
                     <NavLink to='/album' className='item'>Top Albums</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/' className='item'>Top Artists</NavLink>
+                    <NavLink to='/underconstruction' className='item'>Top Artists</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/' className='item'>Top Playlists</NavLink>
+                    <NavLink to='/underconstruction' className='item'>Top Playlists</NavLink>
                 </div>
 
             </div>
