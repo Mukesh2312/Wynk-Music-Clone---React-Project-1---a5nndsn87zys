@@ -13,7 +13,15 @@
     margin: auto;
     gap: 2rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.song_container:hover {
+    background-color: #80808008;
+    border-radius: 0px 3px 3px 0;
 }
 .song_img img {
     width: 50px;
+    display: flex;
 }

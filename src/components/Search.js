@@ -27,23 +27,30 @@ function Search() {
 
     return (
         <div className='search_container'>
-            <h1 style={{ color: 'white' }}>Search Result will be here</h1>
             {
-                searchSong?.map((song, index) => {
-                    return (
-                        <div className="song_container" key={index} onClick={() => handleClick(song._id)}>
+                searchSong.length > 0 ?
+                    <>
 
-                            <div className="song_img">
-                                <img src={song.thumbnail} alt={song.title} />
-                            </div>
-                            <div className="song_tilte">
-                                <p>{song.title}</p>
-                            </div>
-                        </div>
-                    )
-                })
+                        {
+                            searchSong?.map((song, index) => {
+                                return (
+                                    <div className="song_container" key={index} onClick={() => handleClick(song._id)}>
+
+                                        <div className="song_img">
+                                            <img src={song.thumbnail} alt={song.title} />
+                                        </div>
+                                        <div className="song_tilte">
+                                            <p>{song.title}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </>
+                    :
+                    <h1 style={{ color: 'white' }}>Search Result will be here</h1>
+
             }
-
         </div>
     )
 }
