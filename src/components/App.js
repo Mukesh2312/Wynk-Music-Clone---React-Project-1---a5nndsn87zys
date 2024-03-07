@@ -18,6 +18,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
 import Album from "./Album";
 import UnderConstruction from "./UnderConstruction";
+import Trendingsong from "./Trendingsong";
 
 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
           <Route path="/album" element={<Album />} />
+          <Route path="/trendingsongs" element={<Trendingsong />} />
           <Route path="/underconstruction" element={<UnderConstruction />} />
         </Routes>
         <Footer />

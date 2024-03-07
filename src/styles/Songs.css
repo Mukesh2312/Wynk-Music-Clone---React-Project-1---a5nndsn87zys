@@ -70,6 +70,14 @@
 .banner_contianer_for_margin{
     margin-bottom: 4rem;
 }
+.theading{
+  width: 88%;
+  margin: 0rem auto 1rem;
+} 
+.theading h2 {
+  color: #ffffffd6;
+  font-size: 30px;
+}
 
 @media (min-width: 420px) and (max-width: 600px) {
  

@@ -26,7 +26,10 @@ function Footer() {
                     <div className="footer_right_content">
 
                         <div className="left_img_container">
-                            <img src="footerImages/logo.png" alt="" />
+                            <NavLink to='/' >
+
+                                <img src="/footerImages/logo.png" alt="f-logo" />
+                            </NavLink>
                         </div>
                         <div className="txt_container">
 
@@ -42,10 +45,16 @@ function Footer() {
 
                     <div className="right_img_contianer">
                         <div className="img">
-                            <img src="/footerImages/play-store.png" alt="Play store Image" />
+                            <NavLink to="https://play.google.com/store/apps/details?id=com.bsbportal.music&hl=en&gl=US" target='_blank'>
+
+                                <img src="/footerImages/play-store.png" alt="Play store Image" />
+                            </NavLink>
                         </div>
                         <div className="img">
-                            <img src="/footerImages/apple-store.png" alt="App store Image" />
+                            <NavLink to='https://apps.apple.com/in/app/wynk-music-songs-podcasts/id845083955' target='_blank'>
+
+                                <img src="/footerImages/apple-store.png" alt="App store Image" />
+                            </NavLink>
                         </div>
                     </div>
 
@@ -71,16 +80,26 @@ function Footer() {
                         </div>
                         <div className="right">
                             <div className="fb f-social">
-                                <FaFacebook />
+                                <NavLink to='https://www.facebook.com/WynkMusic/' target='_blank' style={{ color: 'white' }}>
+
+                                    <FaFacebook />
+                                </NavLink>
                             </div>
                             <div className="insta f-social">
-                                <FaInstagram />
+                                <NavLink to='https://www.instagram.com/wynkmusic/?hl=en' target='_blank' style={{ color: 'white' }}>
+                                    <FaInstagram />
+                                </NavLink>
                             </div>
                             <div className="twitter f-social">
-                                <FaTwitter />
+                                <NavLink to='https://twitter.com/WynkMusic?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor' target='_blank' style={{ color: 'white' }}>
+                                    <FaTwitter />
+                                </NavLink>
                             </div>
                             <div className="yt f-social">
-                                <FaYoutube />
+                                <NavLink to='https://www.youtube.com/channel/UC3uWLPqsBOlYS6FLhWYwxJg' target='_blank' style={{ color: 'white' }}>
+
+                                    <FaYoutube />
+                                </NavLink>
                             </div>
                         </div>
                     </div>

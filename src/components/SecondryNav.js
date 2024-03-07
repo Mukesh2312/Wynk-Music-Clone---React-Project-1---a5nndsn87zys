@@ -10,7 +10,7 @@ function SecondryNav() {
                     <NavLink to='/' className='item'>All</NavLink>
                 </div>
                 <div className="nav_items">
-                    <NavLink to='/underconstruction' className='item'>Trending Now</NavLink>
+                    <NavLink to='/trendingsongs' className='item'>Trending Now</NavLink>
                 </div>
                 <div className="nav_items">
                     <NavLink to='/songs' className='item'>Songs</NavLink>

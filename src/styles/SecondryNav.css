@@ -23,8 +23,9 @@
 .nav_items:hover .item{
     border-bottom: 2px solid rgb(210, 209, 209);
 }
-/* .active{
+.active{
     font-weight: bolder;
     color: white;
+    /* border-bottom: 1px solid white; */
     border-color: white;
-} */
+}

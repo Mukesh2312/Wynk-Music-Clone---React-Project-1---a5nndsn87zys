@@ -1,48 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 import '../styles/Songs.css'
 import Loader from "./Loader";
 import axios from "axios";
-
 import { useUser } from "./UserProvider";
 
 
+const Trendingsong = () => {
 
-
-
-const Songs = () => {
-    const [music, setMusic] = useState([]);
+    const [tsong, setTSong] = useState([])
     const [loader, setLoader] = useState(false);
     const { audioValue } = useUser()
 
     useEffect(() => {
-
-
-        const Songs = async () => {
-            //fetcing with fetch();
-            // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
-            //     headers: {
-            //         'projectId': 'a5nndsn87zys'
-
-            //     }
-            // });
-            // let data = await response.json();
-            // let results = data.data
-            // console.log(data.data);
-
-            //fetching with axios;
-            await axios.get('https://academics.newtonschool.co/api/v1/music/song?limit=600').then((Response) => {
-                // console.log(Response.data.data);
-                let data = Response.data.data;
-                setMusic(data)
-                setLoader(false);
-            }).catch((error) => {
-                console.log(error);
-            })
-        }
         setLoader(true)
-        Songs()
+        tredingSongs('Trending songs')
     }, [])
 
+    const tredingSongs = async (input) => {
+        // console.log(input)
+        const queryString = {
+            featured: input
+        }
+        await axios.get('https://academics.newtonschool.co/api/v1/music/song', {
+            params: {
+                filter: JSON.stringify(queryString)
+            }
+        }).then((Response) => {
+            // console.log(Response);
+            const data = Response.data.data
+            setTSong(data)
+            setLoader(false)
+
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+    console.log(tsong)
     const handleSong = (item) => {
         audioValue({ item })
     }
@@ -62,16 +55,19 @@ const Songs = () => {
         }
     }
 
-
     return (
-        <div className="music-collection">
+        <div id="trendingsongs" className='music-collection'>
+            <div className="theading">
+
+                <h2>Trending Songs</h2>
+            </div>
 
             {loader ? <Loader /> :
                 <div className="songs_outer_container">
 
                     {
 
-                        music.map((song) => {
+                        tsong.map((song) => {
                             return (
                                 <div className="song_inner_container" key={song._id} >
                                     <div className="song_thumbnail" onClick={() => handleClick(song._id)}>
@@ -88,9 +84,7 @@ const Songs = () => {
                     }
                 </div>
             }
-
         </div>
     )
 }
-
-export default Songs;
+export default Trendingsong;
