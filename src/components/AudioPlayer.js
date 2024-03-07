@@ -68,7 +68,7 @@ function AudioPlayer(props) {
                 {/* <LikeButton /> */}
                 {
 
-                    songData && <div className="like_button songs_item">
+                    songData && getUser && getUser.status == 'success' && <div className="like_button songs_item">
                         <FaHeart onClick={() => likeSong(songData._id)} />
                     </div>
                 }
