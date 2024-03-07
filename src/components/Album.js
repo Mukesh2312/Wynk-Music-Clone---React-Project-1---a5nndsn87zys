@@ -45,8 +45,10 @@ const Album = () => {
 
     return (
         <div className="music-collection">
+            <div className="theading">
 
-
+                <h2>Top Albums</h2>
+            </div>
 
             {loader ? <Loader /> :
 

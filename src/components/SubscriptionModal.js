@@ -9,6 +9,7 @@ function SubscriptionModal() {
         <div className='modal'>
             <div className="modal_content">
                 <h1 className='modal_heading'>Subscribe to our Premiume pack!</h1>
+                <small>Comming Soon</small>
                 <div className='closebtn_contianer'>
                     <FaTimes className='closebtn' onClick={() => modalHandler(false)} />
                 </div>
