@@ -102,7 +102,7 @@ function Banner() {
 
 const bannerImgLink = [
     {
-        src: 'bannerImage/Bhajan.webp'
+        src: 'bannerImage/shivji.webp'
     },
     {
         src: 'bannerImage/Bollywood.webp'
@@ -113,6 +113,9 @@ const bannerImgLink = [
     },
     {
         src: 'bannerImage/Emotion_songs.webp'
+    },
+    {
+        src: 'bannerImage/Bhajan.webp'
     },
     {
         src: 'bannerImage/Freshe.webp'
