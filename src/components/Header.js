@@ -14,8 +14,9 @@ import SmallDeviceMenu from "./SmallDeviceMenu";
 
 const Header = () => {
 
-    const { upDateSongs, getUser, singOutUser, modalHandler, isOpen } = useUser();
+    const { upDateSongs, getUser, singOutUser } = useUser();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
 
     // console.log(upDateSongs)
@@ -37,17 +38,23 @@ const Header = () => {
     }
 
     const sideBarHandler = () => {
-        console.log('sidebar')
+        // console.log('sidebar')
         setIsMenuOpen(!isMenuOpen)
     }
-
-    // scrolling off
-    if (isOpen) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-
+    const modalStatus = () => {
+        setIsModalOpen(!isModalOpen)
     }
+
+    const bodyScrollingControl = (input) => {
+
+        if (input) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+
+        }
+    }
+    // scrolling off
 
 
 
@@ -80,7 +87,10 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none"><g clipPath="url(#clip0_1943_5431)"><rect x="4.125" y={3} width="15.75" height={18} rx={2} stroke="currentColor" strokeWidth="1.5" /><path d="M9 16.1738H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /><g clipPath="url(#clip1_1943_5431)"><path d="M12.3372 13.2729L10.176 10.5687L10.1885 10.0328C11.2028 10.1027 11.9914 9.99537 12.1748 9.03592L10.0136 9.02351L10.3634 8.43772L12.0874 8.46254C11.8247 7.9166 11.1023 7.84931 9.97607 7.8894L10.3634 7.31602L14.0239 7.31055L13.6616 7.87679H12.6496C12.8346 8.07203 12.97 8.29667 12.9745 8.48742L14.0239 8.47496L13.6616 9.03574L12.962 9.0482C12.8527 9.88472 12.0842 10.38 11.113 10.4938L13.2887 13.2722L12.3373 13.2727V13.2727L12.3372 13.2729Z" fill="currentColor" stroke="currentColor" strokeWidth="0.00236424" /></g></g><defs><clipPath id="clip0_1943_5431"><rect width={24} height={24} fill="white" /></clipPath><clipPath id="clip1_1943_5431"><rect width="4.05064" height="5.97455" fill="white" transform="translate(9.97461 7.30078)" /></clipPath></defs></svg>
 
                         </span>
-                        <p onClick={() => modalHandler(true)}>Manage Subscription</p>
+                        <p onClick={() => { modalStatus(); bodyScrollingControl('isModalOpen') }}>Manage Subscription</p>
+                        {
+                            isModalOpen && <SubscriptionModal modalStatus={modalStatus} />
+                        }
                     </div>
                     <div className="fevorite_songs">
                         <NavLink to='/fevorite' className='f_songs_nv_link'>Fevorite</NavLink>
@@ -112,18 +122,18 @@ const Header = () => {
                 </div>
 
                 {/* it will visible only on small device */}
-                <div className="hamburger_menu">
+                <div className="hamburger_menu" >
                     {
-                        <FaBars style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }} onClick={sideBarHandler} />
+                        <FaBars style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px', cursor: 'pointer' }} onClick={() => { sideBarHandler(); bodyScrollingControl('isMenuOpen') }} />
                     }
                 </div>
 
                 {isMenuOpen && <div className="sidebar">
-                    sidebar
-                    {
-                        <FaTimes onClick={sideBarHandler} className="close_icon" />
 
-                    }
+
+                    <FaTimes onClick={sideBarHandler} className="close_icon" />
+
+
 
                     <SmallDeviceMenu sideBarHandler={sideBarHandler} />
                 </div>}
@@ -148,10 +158,7 @@ const Header = () => {
 
 
             <SecondryNav />
-            {
 
-                isOpen && <SubscriptionModal />
-            }
 
         </header>
     )

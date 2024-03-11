@@ -6,7 +6,7 @@ export const UserProvider = ({ children }) => {
 
     const [getUser, setUser] = useState(localStorage.getItem('token') ? { token: localStorage.getItem('token'), status: 'success' } : null)
     const [getList, setList] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
+
     const [currentItem, setCurrentItem] = useState({});
     const [searchSong, setSearchSong] = useState([])
 
@@ -22,16 +22,12 @@ export const UserProvider = ({ children }) => {
     const upDateSongs = (input) => {
         setSearchSong(input)
     }
-    const modalHandler = (input) => {
-        setIsOpen(input)
 
-    }
     const audioValue = (input) => {
         setCurrentItem(input)
     }
     const obj = {
-        modalHandler,
-        isOpen,
+
         getUser,
         signInUser,
         singOutUser,

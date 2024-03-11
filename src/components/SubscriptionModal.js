@@ -1,10 +1,8 @@
 import React from 'react'
 import '../styles/SubModal.css'
-import { useUser } from './UserProvider'
 import { FaTimes } from 'react-icons/fa';
 
-function SubscriptionModal() {
-    const { modalHandler } = useUser();
+function SubscriptionModal({ modalStatus }) {
     return (
         <div className='modal'>
             <div className="modal_content">
@@ -26,7 +24,7 @@ function SubscriptionModal() {
                     </div>
                 </div>
                 <div className='closebtn_contianer'>
-                    <FaTimes className='closebtn' onClick={() => modalHandler(false)} />
+                    <FaTimes className='closebtn' onClick={modalStatus} />
                 </div>
             </div>
 
