@@ -8,22 +8,27 @@
     background-color: rgba(0,0,0, .8);
     overflow: hidden;
     backdrop-filter: blur(10px);
+    color: white;
 }
-
-.modal h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.modal_heading{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
-small{
+.modal_heading img {
+    width: 50px;
+    border-radius: 50%;
+}
+/* small{
     position: absolute;
     top: 57%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #ffffffa1;
-}
+} */
 .closebtn{
     cursor: pointer;
 }
@@ -31,7 +36,7 @@ small{
 .closebtn_contianer{
     position: absolute;
     top: 10%;
-    right: 20%;
+    right: 5%;
     color: #ffffff7d;
     font-size: 40px;
 }

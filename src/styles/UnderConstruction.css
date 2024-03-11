@@ -14,3 +14,13 @@
 .construction_text small {
     color: lightgray;
 }
+.construction_text {
+    width: 70%;
+}
+
+@media screen and (max-width: 599px){
+    .construction_text h1 {
+        color: #c4c0c0;
+        font-size: 20px;
+    }
+}

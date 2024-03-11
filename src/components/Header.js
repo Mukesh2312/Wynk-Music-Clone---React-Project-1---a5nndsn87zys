@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import SecondryNav from "./SecondryNav";
 import { useUser } from "./UserProvider";
 import SubscriptionModal from "./SubscriptionModal";
+import SmallDeviceMenu from "./SmallDeviceMenu";
 
 
 
@@ -36,7 +37,7 @@ const Header = () => {
     }
 
     const sideBarHandler = () => {
-        // console.log('sidebar')
+        console.log('sidebar')
         setIsMenuOpen(!isMenuOpen)
     }
 
@@ -117,6 +118,15 @@ const Header = () => {
                     }
                 </div>
 
+                {isMenuOpen && <div className="sidebar">
+                    sidebar
+                    {
+                        <FaTimes onClick={sideBarHandler} className="close_icon" />
+
+                    }
+
+                    <SmallDeviceMenu sideBarHandler={sideBarHandler} />
+                </div>}
                 <div className="small_logo_container">
                     <NavLink to='/' className="logo">
 

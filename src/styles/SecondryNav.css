@@ -29,3 +29,16 @@
     /* border-bottom: 1px solid white; */
     border-color: white;
 }
+
+#smalldevicemanu .second_nav_container{
+    flex-direction: column;
+}
+#smalldevicemanu {
+    padding-left: 1.5rem;
+}
+
+#smalldevicemanu .second_nav_container {
+    width: 60%;
+    gap: 1rem;
+    margin: 0;
+}

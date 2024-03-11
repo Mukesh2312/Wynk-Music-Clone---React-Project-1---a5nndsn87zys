@@ -8,8 +8,23 @@ function SubscriptionModal() {
     return (
         <div className='modal'>
             <div className="modal_content">
-                <h1 className='modal_heading'>Subscribe to our Premiume pack!</h1>
-                <small>Comming Soon</small>
+                <div className="modal_heading">
+                    <img src="/footerImages/logo.png" alt="primiume logo" />
+                    <h2>
+                        Premium
+                    </h2>
+                </div>
+                {/* <small>Comming Soon</small> */}
+                <div className="premium_subscription_content">
+                    <div className="premium_content_heading">
+                        <h2>
+                            Go Premium
+                        </h2>
+                        <span>
+                            Get the best of music & podcasts
+                        </span>
+                    </div>
+                </div>
                 <div className='closebtn_contianer'>
                     <FaTimes className='closebtn' onClick={() => modalHandler(false)} />
                 </div>
