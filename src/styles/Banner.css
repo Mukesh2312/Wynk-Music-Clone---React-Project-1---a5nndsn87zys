@@ -23,7 +23,7 @@
     right: 6%;
 } */
 
-@media (min-width: 420px) and (max-width: 600px) {
+@media (min-width: 420px) and (max-width: 767px) {
     .banner_contianer_for_margin {
         margin-bottom: 2rem;
     }

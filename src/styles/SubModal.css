@@ -7,7 +7,7 @@
     z-index: 300;
     background-color: rgba(0,0,0, .8);
     overflow: hidden;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(31px);
     color: white;
 }
 .modal_heading{

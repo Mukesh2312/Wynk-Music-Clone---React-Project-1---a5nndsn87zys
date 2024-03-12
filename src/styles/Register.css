@@ -56,7 +56,7 @@
     border: 1px solid #00000038;
 }
 
-@media (min-width: 420px) and (max-width: 600px) {
+@media (min-width: 420px) and (max-width: 767px) {
     .form_container {
         width: 100%;
     }

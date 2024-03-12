@@ -72,7 +72,7 @@
     width: 20%;
 } */
 
-@media (min-width: 420px) and (max-width: 600px) {
+@media (min-width: 420px) and (max-width: 767px) {
     .left_content {
         
         display: none;

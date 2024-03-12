@@ -82,16 +82,16 @@
   font-size: 30px;
 }
 
-@media (min-width: 420px) and (max-width: 600px) {
+@media (min-width: 420px) and (max-width: 767px) {
  
   .songs_outer_container{
     width: 100%;
     justify-content: center;
   }
   .song_inner_container{
-    width: calc((100% - 10px) / 4);
+    width: calc((100% - 10px) / 5);
     margin: 10px;
-    min-width: 3rem;
+    min-width: 2rem;
   }
   .song_inner_container h4{
     font-size: 10px;

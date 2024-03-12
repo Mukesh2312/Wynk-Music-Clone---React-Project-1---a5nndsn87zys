@@ -150,7 +150,7 @@
     }
 }   
 
-@media(max-width: 600px) {
+@media(max-width: 767px) {
     .logo_container,.header_links_container, .second_nav{
         display: none;
     }
@@ -165,7 +165,7 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .small_logo_container,.Small-search_box, .hamburger_menu{
         display: none;
     }
