@@ -2,32 +2,32 @@ import React from 'react'
 import '../styles/SecondryNav.css'
 import { NavLink } from 'react-router-dom';
 
-const SmallDeviceMenu = ({ sideBarHandler }) => {
+const SmallDeviceMenu = ({ sideBarHandler, bodyScrollingControl }) => {
     return (
         <div id="smalldevicemanu">
             <div className="second_nav_container">
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/' className='item'>All</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/trendingsongs' className='item'>Trending Now</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/songs' className='item'>Songs</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/underconstruction' className='item'>New Songs</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/underconstruction' className='item'>Moods & Genre</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/album' className='item'>Top Albums</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/underconstruction' className='item'>Top Artists</NavLink>
                 </div>
-                <div className="nav_items" onClick={sideBarHandler}>
+                <div className="nav_items" onClick={() => { sideBarHandler(); bodyScrollingControl(false) }}>
                     <NavLink to='/underconstruction' className='item'>Top Playlists</NavLink>
                 </div>
 

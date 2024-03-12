@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/SubModal.css'
 import { FaTimes } from 'react-icons/fa';
 
-function SubscriptionModal({ modalStatus }) {
+function SubscriptionModal({ modalStatus, bodyScrollingControl }) {
     return (
         <div className='modal'>
             <div className="modal_content">
@@ -24,7 +24,7 @@ function SubscriptionModal({ modalStatus }) {
                     </div>
                 </div>
                 <div className='closebtn_contianer'>
-                    <FaTimes className='closebtn' onClick={modalStatus} />
+                    <FaTimes className='closebtn' onClick={() => { modalStatus(); bodyScrollingControl(false) }} />
                 </div>
             </div>
 

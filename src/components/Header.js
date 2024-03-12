@@ -89,7 +89,7 @@ const Header = () => {
                         </span>
                         <p onClick={() => { modalStatus(); bodyScrollingControl('isModalOpen') }}>Manage Subscription</p>
                         {
-                            isModalOpen && <SubscriptionModal modalStatus={modalStatus} />
+                            isModalOpen && <SubscriptionModal modalStatus={modalStatus} bodyScrollingControl={bodyScrollingControl} />
                         }
                     </div>
                     <div className="fevorite_songs">
@@ -131,11 +131,11 @@ const Header = () => {
                 {isMenuOpen && <div className="sidebar">
 
 
-                    <FaTimes onClick={sideBarHandler} className="close_icon" />
+                    <FaTimes onClick={() => { sideBarHandler(); bodyScrollingControl(false) }} className="close_icon" />
 
 
 
-                    <SmallDeviceMenu sideBarHandler={sideBarHandler} />
+                    <SmallDeviceMenu sideBarHandler={sideBarHandler} bodyScrollingControl={bodyScrollingControl} />
                 </div>}
                 <div className="small_logo_container">
                     <NavLink to='/' className="logo">
