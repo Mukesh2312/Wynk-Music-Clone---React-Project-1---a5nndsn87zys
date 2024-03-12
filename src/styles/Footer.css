@@ -106,6 +106,13 @@
         width: 95%;
         font-size: 14px;
     }
+    .para h2 {
+        font-size: 18px;
+    }
+    .para p{
+        font-size: 14px;
+        font-weight: 200;
+    }
     .app_container{
         flex-direction: column;
         gap: 3rem;

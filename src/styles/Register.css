@@ -63,4 +63,19 @@
     .register_form form{
         width: 85%;
     }
+   
+    .register_heading h2 {
+        font-size: 23px;
+    }
+    .register_form input, select {
+        font-size: 13px;
+        padding: 9px 13px;
+        border-radius: 11px
+    }
+    .register_form form > button {
+        margin-top: 0.1rem;
+        padding: 7px 19px;
+        font-size: 12px;
+    }
+
 }
