@@ -19,6 +19,7 @@ import TermsOfUse from "../pages/TermsOfUse";
 import Album from "./Album";
 import UnderConstruction from "./UnderConstruction";
 import Trendingsong from "./Trendingsong";
+import UpdatePassword from "./UpdatePassword";
 
 
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/album" element={<Album />} />
           <Route path="/trendingsongs" element={<Trendingsong />} />
           <Route path="/underconstruction" element={<UnderConstruction />} />
+          <Route path="/updatepassword" element={<UpdatePassword />} />
         </Routes>
         <Footer />
         <AudioPlayer />

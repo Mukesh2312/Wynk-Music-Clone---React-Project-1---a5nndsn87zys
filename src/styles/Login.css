@@ -5,6 +5,16 @@
     margin: 2rem 0;
 }
 
+.frgtpss{
+    text-decoration: none;
+    color: #ffffff7d;
+    transition: 0.06s;
+}
+.frgtpss:hover{
+    color: #ffffffd3;
+    
+}
+
 
 
 

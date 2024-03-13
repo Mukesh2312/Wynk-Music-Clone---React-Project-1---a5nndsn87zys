@@ -7,6 +7,7 @@ import Banner from "./Banner";
 
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
+import AudioPlayer from "./AudioPlayer";
 
 
 const Home = () => {
@@ -56,15 +57,6 @@ const Home = () => {
         setLoader(true)
         Songs()
     }, [])
-
-
-
-
-
-
-
-
-
 
     return (
         <div className="music-collection">

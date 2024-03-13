@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
 import '../styles/Register.css';
 import { useUser } from './UserProvider';
 
 import axios from 'axios'
+import UpdatePassword from './UpdatePassword';
 
 
 const Login = () => {
@@ -67,6 +68,10 @@ const Login = () => {
                         </select>
 
                         <button className="button-68" type="submit">Submit</button>
+
+                        <div className="forgetpass">
+                            <NavLink to="/updatepassword" className='frgtpss'>Forgot Password?</NavLink>
+                        </div>
                     </form>
 
                 </div>
