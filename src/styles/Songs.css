@@ -81,6 +81,11 @@
   color: #ffffffd6;
   font-size: 30px;
 }
+.song_inner_container h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @media (min-width: 420px) and (max-width: 767px) {
  

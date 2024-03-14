@@ -42,6 +42,12 @@
 .songs-details {
     display: flex;
     gap: 1.3rem;
+    width: 35%;
+}
+.song-item, .song_name_contianer{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .album_heading {
     margin-bottom: 8px;
