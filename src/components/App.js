@@ -20,6 +20,7 @@ import Album from "./Album";
 import UnderConstruction from "./UnderConstruction";
 import Trendingsong from "./Trendingsong";
 import UpdatePassword from "./UpdatePassword";
+import NewsongSlider from "./NewsongSlider";
 
 
 
@@ -62,6 +63,7 @@ function App() {
           <Route path="/trendingsongs" element={<Trendingsong />} />
           <Route path="/underconstruction" element={<UnderConstruction />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
+          {/* <Route path="/newsongs" element={<NewsongSlider />} /> */}
         </Routes>
         <Footer />
         <AudioPlayer />

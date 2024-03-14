@@ -87,6 +87,25 @@
   text-overflow: ellipsis;
 }
 
+
+/* new song slider ================================== */
+.song_slider_container .songs_outer_container{
+  display: block;
+}
+.song_slider_container .song_thumbnail {
+  margin-bottom: 0.5rem;
+}
+
+.song_slider_container  .song_inner_container{
+  margin: 0;
+}
+.song_slider_container .slick-slide {
+  padding: 19px;
+}
+/* new song slider ================================== */
+
+
+
 @media (min-width: 420px) and (max-width: 767px) {
  
   .songs_outer_container{

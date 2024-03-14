@@ -8,6 +8,7 @@ import Banner from "./Banner";
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
 import AudioPlayer from "./AudioPlayer";
+import NewsongSlider from "./NewsongSlider";
 
 
 const Home = () => {
@@ -90,6 +91,7 @@ const Home = () => {
                     }
                 </div>}
 
+            {/* <NewsongSlider /> */}
         </div>
     )
 }
