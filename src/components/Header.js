@@ -160,7 +160,7 @@ const Header = () => {
                             <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
                             <div>
 
-                                <FaTimes style={{ color: 'white' }} onClick={searchInputHandler} />
+                                <FaTimes style={{ color: 'white' }} onClick={searchInputHandler} className="close_search" />
                             </div>
                         </>
                     }

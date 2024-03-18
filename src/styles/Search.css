@@ -25,6 +25,10 @@
     width: 50px;
     display: flex;
 }
+.close_search {
+    width: 1.3em;
+    height: 1.3em;
+}
 @media (min-width: 400px) and (max-width: 767px) {
     .song_container {
         width: 81%;
