@@ -129,6 +129,11 @@
     cursor: pointer;
 }
 
+.Small-search_box {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
 
 
 

@@ -17,6 +17,7 @@ const Header = () => {
     const { upDateSongs, getUser, singOutUser } = useUser();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [searchInputOpen, setSearchInputOpen] = useState(false)
 
 
     // console.log(upDateSongs)
@@ -56,7 +57,9 @@ const Header = () => {
     }
     // scrolling off
 
-
+    const searchInputHandler = () => {
+        setSearchInputOpen(!searchInputOpen)
+    }
 
     return (
         <header className="header">
@@ -137,21 +140,30 @@ const Header = () => {
 
                     <SmallDeviceMenu sideBarHandler={sideBarHandler} bodyScrollingControl={bodyScrollingControl} />
                 </div>}
-                <div className="small_logo_container">
-                    <NavLink to='/' className="logo">
+                {searchInputOpen ? '' :
+                    <div className="small_logo_container">
+                        <NavLink to='/' className="logo">
 
-                        <img src="https://img.icons8.com/color-glass/144/wynk-music.png" alt="logo" />
+                            <img src="https://img.icons8.com/color-glass/144/wynk-music.png" alt="logo" />
 
-                    </NavLink>
-                </div>
+                        </NavLink>
+                    </div>}
                 <div className="Small-search_box">
                     <NavLink to='/search' className='search_navlink'>
 
-                        <FaSearch style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }}>
+                        {searchInputOpen ? '' : <FaSearch style={{ color: 'rgb(255 255 255 / 76%)', fontSize: '20px' }} onClick={searchInputHandler} />}
 
-                            <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
-                        </FaSearch>
+
                     </NavLink>
+                    {
+                        searchInputOpen && <>
+                            <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
+                            <div>
+
+                                <FaTimes style={{ color: 'white' }} onClick={searchInputHandler} />
+                            </div>
+                        </>
+                    }
                 </div>
             </div>
 

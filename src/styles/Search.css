@@ -25,3 +25,14 @@
     width: 50px;
     display: flex;
 }
+@media (min-width: 400px) and (max-width: 767px) {
+    .song_container {
+        width: 81%;
+        gap: 1rem;
+      }
+      .song_tilte {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      }
+}
