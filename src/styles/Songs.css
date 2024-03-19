@@ -102,6 +102,11 @@
 .song_slider_container .slick-slide {
   padding: 19px;
 }
+.song_slider_container .slick-next {
+  right: 2%;
+  top: 43%;
+}
+
 /* new song slider ================================== */
 
 
@@ -124,5 +129,15 @@
   .theading h2 {
     font-size: 20px;
   }
- 
+  .song_slider_container .slick-slide {
+    padding: 5px;
+  }
+  .song_slider_container .slick-list{
+    height: 120px;
+  }
+  .song_slider_container .slick-prev {
+      left: 1%;
+      z-index: 5;
+      top: 43%;
+  }
 }

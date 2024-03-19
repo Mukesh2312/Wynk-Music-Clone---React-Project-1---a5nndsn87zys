@@ -1,0 +1,22 @@
+.song_slider_container{
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+.song_slider_container .slick-list {
+    height: 250px;
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .song_slider_container {
+        width: 90%;
+        margin: auto;
+    }
+    .song_slider_container .slick-slide {
+        width: 81px!important;
+    }
+   
+      .songs_outer_container h2 {
+        font-size: 18px;
+    }
+}
