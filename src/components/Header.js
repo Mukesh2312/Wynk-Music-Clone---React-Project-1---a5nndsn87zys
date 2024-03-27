@@ -138,7 +138,7 @@ const Header = () => {
 
 
 
-                    <SmallDeviceMenu sideBarHandler={sideBarHandler} bodyScrollingControl={bodyScrollingControl} />
+                    <SmallDeviceMenu sideBarHandler={sideBarHandler} bodyScrollingControl={bodyScrollingControl} onChangeHandler={onChangeHandler} />
                 </div>}
                 {searchInputOpen ? '' :
                     <div className="small_logo_container">
@@ -160,7 +160,9 @@ const Header = () => {
                             <input type="text" placeholder="Search Music" onInput={onSearchHandler} />
                             <div>
 
-                                <FaTimes style={{ color: 'white' }} onClick={searchInputHandler} className="close_search" />
+                                <FaTimes style={{ color: 'white' }} onClick={searchInputHandler} className="close_search" >
+
+                                </FaTimes>
                             </div>
                         </>
                     }

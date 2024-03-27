@@ -18,13 +18,25 @@ function Banner() {
         speed: 400,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     className: "center",
                     centerMode: true,
                     infinite: true,
                     autoplay: true,
                     centerPadding: "60px",
+                    slidesToShow: 1,
+                    speed: 400,
+                }
+            },
+            {
+                breakpoint: 1190,
+                settings: {
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    autoplay: true,
+                    centerPadding: "80px",
                     slidesToShow: 1,
                     speed: 400,
                 }

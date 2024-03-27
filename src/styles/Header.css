@@ -170,10 +170,20 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     .small_logo_container,.Small-search_box, .hamburger_menu{
         display: none;
     }
     
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    #logo_text{
+        display: none;
+    }
+    .subcription p{
+        display: none;
+    }
+
 }
 /* media queries */
