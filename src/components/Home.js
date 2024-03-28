@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import '../styles/Songs.css'
+import '../styles/Home.css'
 import Loader from "./Loader";
 import axios from "axios";
 import Banner from "./Banner";
@@ -7,13 +8,15 @@ import Banner from "./Banner";
 
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
-import AudioPlayer from "./AudioPlayer";
+
 import NewsongSlider from "./NewsongSlider";
 
 
 const Home = () => {
-    const [music, setMusic] = useState([]);
+
     const [loader, setLoader] = useState(false);
+    const [trendingSong, setTrendingSong] = useState([]);
+
 
     const { setList } = useUser();
     const navigate = useNavigate()
@@ -30,34 +33,42 @@ const Home = () => {
     useEffect(() => {
 
 
-        const Songs = async () => {
-            //fetcing with fetch();
-            // let response = await fetch('https://academics.newtonschool.co/api/v1/music/album?limit=200', {
-            //     headers: {
-            //         'projectId': 'a5nndsn87zys'
 
-            //     }
-            // });
-            // let data = await response.json();
-            // let results = data.data
-            // console.log(data.data)
-
-
-
-
-            //fetching with axios;
-            await axios.get('https://academics.newtonschool.co/api/v1/music/album?limit=50').then((Response) => {
-                // console.log(Response.data.data);
-                let data = Response.data.data;
-                setMusic(data)
-                setLoader(false);
-            }).catch((error) => {
-                console.log(error);
-            })
-        }
         setLoader(true)
-        Songs()
+
+
+
+        // =====trending song () call start
+        getNewSongs('Trending songs')
+        // =====trending song () call end
     }, [])
+
+
+    // ===============================➡️➡️➡️➡️Trendin song API calling ✅start⬅️⬅️⬅️⬅️=======================
+
+    const getNewSongs = async (input) => {
+
+        const queryString = {
+            featured: input
+        }
+
+        try {
+            await axios.get('https://academics.newtonschool.co/api/v1/music/song?limit=12', {
+                params: {
+                    filter: JSON.stringify(queryString)
+                }
+            }).then((Response) => {
+                console.log(Response.data.data)
+                setTrendingSong(Response.data.data);
+                setLoader(false)
+            })
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
+    // ===============================➡️➡️➡️➡️Trendin song API calling ✅end⬅️⬅️⬅️⬅️=======================
 
     return (
         <div className="music-collection">
@@ -70,28 +81,12 @@ const Home = () => {
 
 
             {loader ? <Loader /> :
+                <div className="hsongcontainer">
+                    <NewsongSlider trendingSong={trendingSong} heading={'Trending Song'} />
+                </div>
 
-                <div className="songs_outer_container">
+            }
 
-                    {
-                        music.map((song) => {
-                            return (
-                                <div className="song_inner_container" key={song._id} onClick={() => onclickAlbum(song._id)}>
-                                    <div className="song_thumbnail">
-                                        <img src={song.image} alt={song.title} />
-                                        <div className="overlay">
-                                            <span className="play-button">&#9654;</span>
-                                        </div>
-                                    </div>
-                                    <h4>{song.title}</h4>
-
-                                </div>
-                            )
-                        })
-                    }
-                </div>}
-
-            <NewsongSlider />
         </div>
     )
 }

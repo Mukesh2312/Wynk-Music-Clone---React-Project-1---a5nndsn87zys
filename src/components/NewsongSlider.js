@@ -12,29 +12,29 @@ const NewsongSlider = (props) => {
     const { audioValue } = useUser();
     const [newsongs, setNewsongs] = useState([]);
 
-    useEffect(() => {
-        getNewSongs('Trending songs')
-    }, [])
-    const getNewSongs = async (input) => {
+    // useEffect(() => {
+    //     getNewSongs('Trending songs')
+    // }, [])
+    // const getNewSongs = async (input) => {
 
-        const queryString = {
-            featured: input
-        }
+    //     const queryString = {
+    //         featured: input
+    //     }
 
-        try {
-            await axios.get('https://academics.newtonschool.co/api/v1/music/song?limit=12', {
-                params: {
-                    filter: JSON.stringify(queryString)
-                }
-            }).then((Response) => {
-                console.log(Response.data.data)
-                setNewsongs(Response.data.data);
-            })
-        } catch (err) {
-            console.log(err)
-        }
+    //     try {
+    //         await axios.get('https://academics.newtonschool.co/api/v1/music/song?limit=12', {
+    //             params: {
+    //                 filter: JSON.stringify(queryString)
+    //             }
+    //         }).then((Response) => {
+    //             console.log(Response.data.data)
+    //             setNewsongs(Response.data.data);
+    //         })
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
 
-    }
+    // }
 
     const setSong = (input) => {
         audioValue({ input })
@@ -90,15 +90,15 @@ const NewsongSlider = (props) => {
         ]
     };
 
-
+    const { trendingSong, heading } = props;
     return (
         <div className="song_slider_container">
             <div className="songs_outer_container">
-                <h2>Featured Song</h2>
+                <h2>{heading}</h2>
                 <Slider {...settings}>
 
                     {
-                        newsongs && newsongs.map((song, index) => {
+                        trendingSong && trendingSong.map((song, index) => {
                             return (
                                 <div className="song_inner_container" key={index} >
                                     <div className="song_thumbnail" onClick={() => handleClick(song._id)}>
