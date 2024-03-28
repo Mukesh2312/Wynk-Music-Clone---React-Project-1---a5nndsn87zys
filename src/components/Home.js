@@ -91,7 +91,7 @@ const Home = () => {
                     }
                 </div>}
 
-            {/* <NewsongSlider /> */}
+            <NewsongSlider />
         </div>
     )
 }

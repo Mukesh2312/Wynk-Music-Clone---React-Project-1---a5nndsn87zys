@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const NewsongSlider = (props) => {
     const navigate = useNavigate()
-    const { setList } = useUser();
+    const { audioValue } = useUser();
     const [newsongs, setNewsongs] = useState([]);
 
     useEffect(() => {
@@ -36,11 +36,14 @@ const NewsongSlider = (props) => {
 
     }
 
-
+    const setSong = (input) => {
+        audioValue({ input })
+    }
 
     const handleClick = async (id) => {
         await axios.get(`https://academics.newtonschool.co/api/v1/music/song/${id}`).then((Response) => {
-            setList(Response.data.data)
+            let data = (Response.data.data)
+            setSong(data)
             console.log(Response.data.data)
 
         }).catch((err) => {
@@ -78,8 +81,10 @@ const NewsongSlider = (props) => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false
                 }
             }
         ]

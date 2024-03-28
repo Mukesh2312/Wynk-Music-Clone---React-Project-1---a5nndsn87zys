@@ -7,7 +7,8 @@ import axios from 'axios'
 
 function AudioPlayer(props) {
     const { currentItem, getUser } = useUser()
-    const songData = currentItem.item;
+    const songData = currentItem && currentItem.item || currentItem.input;
+
     console.log(songData, 'songdata')
 
     const likeSong = async (songId) => {
