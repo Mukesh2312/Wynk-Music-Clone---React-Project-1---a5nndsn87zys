@@ -103,8 +103,8 @@
   padding: 19px;
 }
 .song_slider_container .slick-next {
-  right: 2%;
-  top: 43%;
+  right: -25px;
+  top: 50%;
 }
 
 /* new song slider ================================== */
@@ -140,6 +140,17 @@
       z-index: 5;
       top: 43%;
   }
+  .play-button {
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .slick-prev:before, .slick-next:before{
+    opacity: 0.4;
+  }
+
+
 }
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   .song_inner_container{

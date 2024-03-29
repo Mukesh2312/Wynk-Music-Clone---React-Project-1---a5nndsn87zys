@@ -16,6 +16,10 @@ const Home = () => {
 
     const [loader, setLoader] = useState(false);
     const [trendingSong, setTrendingSong] = useState([]);
+    const [topTwentySong, setTopTwentySong] = useState([]);
+    const [topFiftySong, setTopFiftySong] = useState([]);
+    const [evergren, setEvergreen] = useState([]);
+    const [soul, setsoul] = useState([]);
 
 
     const { setList } = useUser();
@@ -40,6 +44,10 @@ const Home = () => {
 
         // =====trending song () call start
         getNewSongs('Trending songs')
+        getNewSongs('Top 20 of this week')
+        getNewSongs('Top 50 of this month')
+        getNewSongs('Evergreen melodies')
+        getNewSongs('Soul soother')
         // =====trending song () call end
     }, [])
 
@@ -59,7 +67,18 @@ const Home = () => {
                 }
             }).then((Response) => {
                 console.log(Response.data.data)
-                setTrendingSong(Response.data.data);
+                let data = Response.data.data;
+                if (input === 'Trending songs') {
+                    setTrendingSong(data);
+                } else if (input === 'Top 20 of this week') {
+                    setTopTwentySong(data);
+                } else if (input === 'Top 50 of this month') {
+                    setTopFiftySong(data);
+                } else if (input === 'Evergreen melodies') {
+                    setEvergreen(data);
+                } else if (input === 'Soul soother') {
+                    setsoul(data);
+                }
                 setLoader(false)
             })
         } catch (err) {
@@ -81,9 +100,25 @@ const Home = () => {
 
 
             {loader ? <Loader /> :
-                <div className="hsongcontainer">
-                    <NewsongSlider trendingSong={trendingSong} heading={'Trending Song'} />
-                </div>
+                <>
+
+
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={trendingSong} heading={'Trending Song'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={topTwentySong} heading={'Top 20 of this week'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={topFiftySong} heading={'Top 50 of this month'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={evergren} heading={'evergreen melodies'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={soul} heading={'soul soother'} />
+                    </div>
+                </>
 
             }
 

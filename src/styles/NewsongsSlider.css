@@ -6,6 +6,10 @@
 .song_slider_container .slick-list {
     height: 250px;
 }
+.songs_outer_container h2{
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
 
 @media (min-width: 400px) and (max-width: 767px) {
     .song_slider_container {
@@ -18,5 +22,8 @@
    
       .songs_outer_container h2 {
         font-size: 18px;
+    }
+    .song_slider_container .slick-list {
+        height: auto;
     }
 }
