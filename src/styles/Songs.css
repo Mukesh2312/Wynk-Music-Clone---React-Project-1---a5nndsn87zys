@@ -146,9 +146,7 @@
     height: 20px;
   }
 
-  .slick-prev:before, .slick-next:before{
-    opacity: 0.4;
-  }
+ 
 
 
 }

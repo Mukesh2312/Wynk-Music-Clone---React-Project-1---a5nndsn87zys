@@ -10,6 +10,10 @@
     margin-bottom: 0.5rem;
     text-transform: capitalize;
 }
+.slick-prev:before,
+.slick-next:before{
+   opacity: 0.4;
+ }
 
 @media (min-width: 400px) and (max-width: 767px) {
     .song_slider_container {
