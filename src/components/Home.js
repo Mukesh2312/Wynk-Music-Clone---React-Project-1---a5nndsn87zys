@@ -4,8 +4,6 @@ import '../styles/Home.css'
 import Loader from "./Loader";
 import axios from "axios";
 import Banner from "./Banner";
-
-
 import { useUser } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
 
@@ -23,6 +21,7 @@ const Home = () => {
     const [romanticSong, setRomanticSong] = useState([])
     const [sadSong, setSadSong] = useState([])
     const [excitedSong, setExcitedSong] = useState([])
+    const [happySong, setHappySong] = useState([])
 
     const { setList } = useUser();
     const navigate = useNavigate()
@@ -37,13 +36,7 @@ const Home = () => {
         })
     }
     useEffect(() => {
-
-
-
         setLoader(true)
-
-
-
         // =====trending song () call start
         getNewSongs('featured', 'Trending songs')
         getNewSongs('featured', 'Top 20 of this week')
@@ -53,6 +46,7 @@ const Home = () => {
         getNewSongs('mood', 'romantic')
         getNewSongs('mood', 'sad')
         getNewSongs('mood', 'excited')
+        getNewSongs('mood', 'happy')
         // =====trending song () call end
     }, [])
 
@@ -89,6 +83,8 @@ const Home = () => {
                     setSadSong(data);
                 } else if (input === 'excited') {
                     setExcitedSong(data)
+                } else if (input === 'happy') {
+                    setHappySong(data)
                 }
                 setLoader(false)
             })
@@ -137,6 +133,9 @@ const Home = () => {
                     </div>
                     <div className="hsongcontainer">
                         <NewsongSlider trendingSong={excitedSong} heading={'excited songs'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={happySong} heading={'happy songs'} />
                     </div>
                 </>
 
