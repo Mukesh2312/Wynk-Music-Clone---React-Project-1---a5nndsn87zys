@@ -20,7 +20,9 @@ const Home = () => {
     const [topFiftySong, setTopFiftySong] = useState([]);
     const [evergren, setEvergreen] = useState([]);
     const [soul, setsoul] = useState([]);
-
+    const [romanticSong, setRomanticSong] = useState([])
+    const [sadSong, setSadSong] = useState([])
+    const [excitedSong, setExcitedSong] = useState([])
 
     const { setList } = useUser();
     const navigate = useNavigate()
@@ -43,21 +45,24 @@ const Home = () => {
 
 
         // =====trending song () call start
-        getNewSongs('Trending songs')
-        getNewSongs('Top 20 of this week')
-        getNewSongs('Top 50 of this month')
-        getNewSongs('Evergreen melodies')
-        getNewSongs('Soul soother')
+        getNewSongs('featured', 'Trending songs')
+        getNewSongs('featured', 'Top 20 of this week')
+        getNewSongs('featured', 'Top 50 of this month')
+        getNewSongs('featured', 'Evergreen melodies')
+        getNewSongs('featured', 'Soul soother')
+        getNewSongs('mood', 'romantic')
+        getNewSongs('mood', 'sad')
+        getNewSongs('mood', 'excited')
         // =====trending song () call end
     }, [])
 
 
     // ===============================➡️➡️➡️➡️Trendin song API calling ✅start⬅️⬅️⬅️⬅️=======================
 
-    const getNewSongs = async (input) => {
+    const getNewSongs = async (ty, input) => {
 
         const queryString = {
-            featured: input
+            [ty]: input
         }
 
         try {
@@ -78,6 +83,12 @@ const Home = () => {
                     setEvergreen(data);
                 } else if (input === 'Soul soother') {
                     setsoul(data);
+                } else if (input === 'romantic') {
+                    setRomanticSong(data);
+                } else if (input === 'sad') {
+                    setSadSong(data);
+                } else if (input === 'excited') {
+                    setExcitedSong(data)
                 }
                 setLoader(false)
             })
@@ -117,6 +128,15 @@ const Home = () => {
                     </div>
                     <div className="hsongcontainer">
                         <NewsongSlider trendingSong={soul} heading={'soul soother'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={romanticSong} heading={'romantic songs'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={sadSong} heading={'sad songs'} />
+                    </div>
+                    <div className="hsongcontainer">
+                        <NewsongSlider trendingSong={excitedSong} heading={'excited songs'} />
                     </div>
                 </>
 
