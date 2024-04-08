@@ -35,6 +35,8 @@ const Home = () => {
             console.log(error)
         })
     }
+
+
     useEffect(() => {
         setLoader(true)
         // =====trending song () call start
