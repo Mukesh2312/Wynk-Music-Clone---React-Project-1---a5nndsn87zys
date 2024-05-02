@@ -55,3 +55,7 @@
     align-items: center;
     height: 100%;
 }
+
+.premium_subscription_content {
+    width: 60%;
+}

@@ -21,6 +21,17 @@ function SubscriptionModal({ modalStatus, bodyScrollingControl }) {
                         <span>
                             Get the best of music & podcasts
                         </span>
+
+                    </div>
+                    <div className="plans-details-outer">
+                        <div className="plans_header">
+                            <div className="header_items">
+                                <div className="items_plans">Benifits</div>
+                                <div className="items_plans">Now</div>
+                                <div className="items_plans">Premium</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div className='closebtn_contianer'>
