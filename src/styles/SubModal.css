@@ -59,3 +59,69 @@
 .premium_subscription_content {
     width: 60%;
 }
+.premium_content_heading {
+    text-align: center;
+}
+.header_items {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+.plans_header {
+    border-bottom: 1px solid gray;
+    padding-bottom: 9px;
+}
+.plans-prices {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    margin-top: 1.5rem;
+}
+.features-items, .plan-status{
+    margin-bottom: 8px;
+}
+.plan-status{
+    padding-left: 10px;
+
+}
+.plan-status svg{
+    color:#f00505;
+}
+.choose-plane {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.plans {
+    border: 1px solid white;
+    width: 7rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.plans:hover {
+    border-color:#f00505;
+}
+.plans:after{
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    
+    
+}
+.plans:hover::after{
+    background-color: #f00505;
+}
+p > sup{
+    color: gray;
+    text-decoration: line-through solid gray 1.3px;
+}
