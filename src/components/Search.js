@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../styles/Search.css'
 import { useUser } from './UserProvider';
 import axios from 'axios';
+import Player from './Player';
 
 function Search() {
     const { searchSong, audioValue } = useUser();
@@ -51,6 +52,7 @@ function Search() {
                     <h1 style={{ color: 'white' }}>Search Result will be here</h1>
 
             }
+            <Player />
         </div>
     )
 }

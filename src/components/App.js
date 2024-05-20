@@ -21,6 +21,7 @@ import UnderConstruction from "./UnderConstruction";
 import Trendingsong from "./Trendingsong";
 import UpdatePassword from "./UpdatePassword";
 import NewsongSlider from "./NewsongSlider";
+import Player from "./Player";
 
 
 
@@ -66,7 +67,7 @@ function App() {
           {/* <Route path="/newsongs" element={<NewsongSlider />} /> */}
         </Routes>
         <Footer />
-        <AudioPlayer />
+        <Player />
 
       </Router>
     </div>

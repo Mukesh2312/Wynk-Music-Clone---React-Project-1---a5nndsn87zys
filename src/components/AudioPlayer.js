@@ -1,13 +1,13 @@
 import React from 'react'
 import '../styles/AudioPlayer.css'
-import { useUser } from './UserProvider'
+// import { useUser } from './UserProvider'
 import LikeButton from './LikeButton'
 import { FaHeart } from 'react-icons/fa'
 import axios from 'axios'
 
 function AudioPlayer(props) {
-    const { currentItem, getUser } = useUser()
-    const songData = currentItem && currentItem.item || currentItem.input;
+    // const { currentItem, getUser } = useUser()
+    // const songData = currentItem && currentItem.item || currentItem.input;
 
     console.log(songData, 'songdata')
 

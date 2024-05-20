@@ -7,4 +7,14 @@
   position: relative;
 }
 
+.rhap_container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(33,37,45)!important;
+}
+.rhap_time {
+  color: #fff!important;
+
+}
 
