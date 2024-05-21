@@ -4,6 +4,8 @@ import axios from 'axios';
 import '../styles/Register.css';
 
 const Register = () => {
+    const [getError, setError] = useState('');
+
     const navigate = useNavigate();
     const [getData, setData] = useState({
         name: '',
@@ -20,6 +22,11 @@ const Register = () => {
             console.log(log)
         }).catch((error) => {
             console.log(error)
+            if (error.response && error.response.data && error.response.data.message) {
+                setError(error.response.data.message);
+            } else {
+                setError('Unknown Error Plear try after some time')
+            }
         })
     }
 
@@ -35,7 +42,14 @@ const Register = () => {
                 <div className="register_heading">
                     <h2>Register</h2>
                 </div>
+                <div className="error_container" style={{ color: 'red' }}>
+
+                    <h5>
+                        {getError}
+                    </h5>
+                </div>
                 <div className="register_form">
+                    {/* {getError} */}
                     <form onSubmit={onSubmitHandler}>
                         <input type="text" name="name" value={getData.name} id="name" placeholder="Name" required autoComplete="off" onChange={onChangerHandler} />
                         <input type="text" name="email" value={getData.email} id="email" placeholder="Email" required autoComplete="off" onChange={onChangerHandler} />

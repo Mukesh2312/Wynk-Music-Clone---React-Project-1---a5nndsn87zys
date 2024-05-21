@@ -85,8 +85,8 @@ function AlbumDetail() {
                     {
                         getList.songs?.map((song, index) => {
                             return (
-                                <div className="songs_list_container" key={index} onClick={() => handleClick(song._id)}>
-                                    <div className="songs-details ">
+                                <div className="songs_list_container" key={index} >
+                                    <div className="songs-details " onClick={() => handleClick(song._id)}>
                                         <div className="serial_no">
                                             {index + 1}
                                         </div>
