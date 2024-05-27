@@ -47,6 +47,11 @@
     transition: 0.02s;
     /* font-size: 18px; */
     display: flex;
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .login_btn:hover{

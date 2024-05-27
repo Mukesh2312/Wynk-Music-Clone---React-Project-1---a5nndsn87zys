@@ -52,7 +52,7 @@ function Search() {
                     <h1 style={{ color: 'white' }}>Search Result will be here</h1>
 
             }
-            <Player />
+
         </div>
     )
 }

@@ -113,13 +113,15 @@ const Header = () => {
                                 <li>
                                     <NavLink to='/register' className='login_btn'>
 
-                                        Singup
+                                        SignUp
                                     </NavLink>
                                 </li>
                             </>
                         }
                         {getUser && getUser.status == "success" && <li>
-                            <NavLink to="/" className='login_btn' onClick={onChangeHandler}>Logout</NavLink>
+                            <NavLink to="/" className='login_btn' onClick={onChangeHandler}>
+                                <FaUser />    Logout
+                            </NavLink>
                         </li>}
                     </ul>
                 </div>
