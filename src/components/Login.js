@@ -18,6 +18,8 @@ const Login = () => {
     const [getError, setError] = useState('');
 
     const { signInUser } = useUser();
+    const navigate = useNavigate();
+
 
     const onSubmitHandler = (e) => {
         setError('')
@@ -43,7 +45,6 @@ const Login = () => {
 
     }
 
-    const navigate = useNavigate();
     return (
         <div className="login_container Register_container">
             <div className="login_inner_container form_container">

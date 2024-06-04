@@ -14,13 +14,17 @@ const Player = () => {
         <AudioPlayer
             autoPlay
             src={songData && songData.audio_url}
+
             onPlay={e => console.log("onPlay")}
             showSkipControls={true}
             showJumpControls={false}
+
+
         // other props here
         />
     )
 
 }
+
 
 export default Player
