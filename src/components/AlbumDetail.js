@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/AlbumDetaile.css'
 import { FaHeart } from 'react-icons/fa';
 import { useUser } from './UserProvider';
@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function AlbumDetail() {
     const { getList, audioValue, getUser } = useUser()
+    const [likedSong, setLikedSong] = useState([])
 
     const likeSong = async (songId) => {
         //fetcing with fetch();
@@ -25,19 +26,28 @@ function AlbumDetail() {
 
 
         //fetching with axios;
-        axios.patch('https://academics.newtonschool.co/api/v1/music/favorites/like', {
-            "songId": songId
-        }, {
-            headers: {
-                Authorization: `Bearer ${getUser?.token}`
-            }
-        }).then((Response) => {
-            // console.log(Response);
-            let data = Response.data.data;
+        try {
+            await axios.patch('https://academics.newtonschool.co/api/v1/music/favorites/like', {
+                "songId": songId
+            }, {
+                headers: {
+                    Authorization: `Bearer ${getUser?.token}`
+                }
+            });
 
-        }).catch((error) => {
-            console.log(error);
-        })
+            setLikedSong((preLikesongs) => {
+                if (preLikesongs.includes(songId)) {
+                    return preLikesongs.filter(id => id !== songId)
+                } else {
+                    return [...preLikesongs, songId]
+                }
+            });
+        } catch (error) {
+            console.log(error)
+        }
+
+
+
     }
 
     // console.log(getList)
@@ -58,7 +68,15 @@ function AlbumDetail() {
         } catch (err) {
             console.log(err.message)
         }
+
     }
+
+    //like button color
+
+    const colorHandler = () => {
+        setColor(!getColor);
+    }
+
 
     return (
         <div className='album_detail_section'>
@@ -84,6 +102,7 @@ function AlbumDetail() {
                     </div>
                     {
                         getList.songs?.map((song, index) => {
+                            const isLiked = likedSong.includes(song._id);
                             return (
                                 <div className="songs_list_container" key={index} >
                                     <div className="songs-details " onClick={() => handleClick(song._id)}>
@@ -117,7 +136,7 @@ function AlbumDetail() {
                                         3:45
                                     </div>
                                     <div className="like_button songs_item">
-                                        <FaHeart onClick={() => likeSong(song._id)} />
+                                        <FaHeart onClick={() => likeSong(song._id)} style={{ fill: isLiked ? 'red' : '#ffffffe0' }} />
                                     </div>
 
                                 </div>
